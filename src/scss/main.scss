@@ -1,0 +1,10 @@
+@import './utils/utils';
+@import './components/_components-index';
+
+.App {
+    height: 100vh;
+    display: flex;
+    color: $opaque-white;
+    background-color: $background-color;
+    font-family: $font-family-base;
+}

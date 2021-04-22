@@ -1,0 +1,25 @@
+// Variables
+
+// Colors
+// $base-color: #c6538c;
+// $border-dark: rgba($base-color, 0.88);
+
+// Colors
+$dark-gray: #202124;
+$light-gray: #2c2d31;
+$lighter-gray: #46484e;
+$highlight-gray: #b0b1b7;
+$opaque-white: rgba(white, 0.75);
+$pastel-red: #e06060;
+$pastel-blue: #50cddc;
+
+// Variables
+$background-color: $dark-gray;
+
+// Typography
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,300&display=swap');
+$font-family-base: 'Montserrat', sans-serif;
+
+// Functions
+// Mixins
+// Helpers
