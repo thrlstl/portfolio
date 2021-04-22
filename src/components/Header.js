@@ -1,5 +1,3 @@
-import RSSIcon from '../assets/icons/rss-icon-2.svg'
-
 function Header() {
     return (
         <div className='header'>
