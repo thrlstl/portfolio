@@ -5,9 +5,9 @@
     height: 100vh;
     display: flex;
     color: $opaque-white;
-    background-color: $background-color;
+    background-color: $bg-dark;
     font-family: $font-family-base;
     &.App[theme=light] {
-        background-color: white;
+        background-color: $bg-light;
     }
 }

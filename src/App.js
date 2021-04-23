@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
 import './scss/main.scss'
 import Header from './components/Header'
+import ThemeContext from './contexts/ThemeContext'
 
 function App() {
 
-  const [isLight, setIsLight] = useState(false)
+  const [isLight, setIsLight] = useState(true)
   const [theme, setTheme] = useState('dark')
 
   useEffect(() => {
@@ -16,9 +17,11 @@ function App() {
   }, [isLight])
 
   return (
-    <div theme={theme} className="App">
-      <Header />
-    </div>
+    <ThemeContext.Provider value={theme}>
+      <div className="App" theme={theme}>
+        <Header />
+      </div>
+    </ThemeContext.Provider>
   );
 }
 
