@@ -1,14 +1,14 @@
 .footer {
-    position: fixed;
-    // bottom: 10vmin;
-    width: 100vw;
-    height: 10vmin;
-    bottom: 0;
-    background-color: #2c2d31;
-    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.45);
-    -webkit-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.45);  
-    -moz-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.45);
-    @media (min-width: 768px) {
-        height: 76px;
-      }
+  position: fixed;
+  // bottom: 10vmin;
+  width: 100vw;
+  height: 10vmin;
+  bottom: 0;
+  background-color: #2c2d31;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.45);
+  -webkit-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.45);
+  @media (min-width: 768px) {
+    height: 76px;
+  }
 }
