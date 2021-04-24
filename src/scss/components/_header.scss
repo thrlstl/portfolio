@@ -1,71 +1,76 @@
 .header {
-    position: fixed;
-    display: table;
-    // color: $background-color;
-    width: 100vw;
-    height: 10vmin;
-    box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.45);
-    -webkit-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.45);  
-    -moz-box-shadow: 0px 0px 18px 0px rgba(0,0,0,0.45);
-    @media (min-width: 768px) {
-        height: 76px;
-      }
+  position: fixed;
+  display: flex;
+  align-items: center;
+  width: 100vw;
+  height: 10vw;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.45);
+  -webkit-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.45);
+  -moz-box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.45);
+  @media (min-width: 768px) {
+    height: 76px;
+  }
 }
 
 .header-icon {
-    padding-left: 2vw;
-    padding-top: 2vmin;
-    height: 5vmin;
+  padding-left: 1%;
+  height: 75%;
 }
 
 .header-content {
-    display: table-cell;
-    height: min-content;
-    vertical-align: middle;
-    padding-left: 2vw;
+  display: flex;
+  margin-left: 0;
+  margin-right: auto;
+  align-items: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  @media (max-width: 768px) {
+    margin-right: 0;
+    margin-left: auto;
+  }
 }
 
 .header-name {
-    color: $opaque-white;
-    font-size: 3vw;
-    font-weight: 600;
-    @media (min-width: 768px) {
-        font-size: 23px;
-      }
+  color: $opaque-white;
+  font-size: 3vw;
+  font-weight: 600;
+  @media (min-width: 768px) {
+    font-size: 23px;
+  }
 }
 
 .header-separator {
-    color: $opaque-white;
-    font-size: 3vw;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-weight: 400;
-    @media (min-width: 768px) {
-        font-size: 23px;
-      }
+  color: $opaque-white;
+  font-size: 3vw;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-weight: 400;
+  @media (min-width: 768px) {
+    font-size: 23px;
+  }
 }
 
 .header-title {
-    color: $opaque-white;
-    font-size: 3vw;
-    font-style: italic;
-    font-weight: 300;
-    @media (min-width: 768px) {
-        font-size: 23px;
-      }
+  color: $opaque-white;
+  font-size: 3vw;
+  font-style: italic;
+  font-weight: 300;
+  @media (min-width: 768px) {
+    font-size: 23px;
+  }
 }
 
 .links-container {
-    padding-right: 2vw;
-    display: table-cell;
-    width: 25vw;
-    height: min-content;
-    vertical-align: middle;
+  padding-right: 2vw;
+  display: table-cell;
+  width: 25vw;
+  height: min-content;
+  vertical-align: middle;
 }
 
 .icon {
-    padding-left: 10px;
-    float: right;
-    width: 50px;
-    height: auto;
+  padding-left: 10px;
+  float: right;
+  width: 50px;
+  height: auto;
 }
