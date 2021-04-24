@@ -5,6 +5,7 @@ import Footer from './components/Footer'
 import MenuButton from './components/MenuButton'
 import { useMediaQuery } from 'react-responsive'
 import ThemeContext from './contexts/ThemeContext'
+import isMobileContext from './contexts/isMobileContext'
 
 function App() {
 
@@ -37,10 +38,12 @@ function App() {
 
   return (
     <ThemeContext.Provider value={theme}>
+      <isMobileContext.Provider value={isMobile}>
       <div className="App" theme={theme}>
         <Header />
         {renderFooter()}
       </div>
+      </isMobileContext.Provider>
     </ThemeContext.Provider>
   );
 }
