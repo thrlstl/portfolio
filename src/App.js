@@ -8,7 +8,7 @@ import ThemeContext from './contexts/ThemeContext'
 
 function App() {
 
-  const [isLight, setIsLight] = useState(false)
+  const [isLight] = useState(false)
   const [theme, setTheme] = useState('dark')
   const [isFooterVisible, setIsFooterVisible] = useState(true)
   const isMobile = useMediaQuery({ query: '(max-width: 576px)' })
