@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './scss/main.scss'
 import Header from './components/Header'
-import Footer from './components/Footer'
+import Footer from './components/Footer/Footer'
 import { useMediaQuery } from 'react-responsive'
 import ThemeContext from './contexts/ThemeContext'
 import isMobileContext from './contexts/isMobileContext'

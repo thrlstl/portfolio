@@ -11,15 +11,20 @@ $lighter-gray: #46484e;
 $highlight-gray: #b0b1b7;
 $opaque-white: rgba(white, 0.75);
 $pastel-red: #e06060;
+$pastel-red-light: #ffa2a2;
 $pastel-blue: #50cddc;
+
+//Box Shadow
+$light-mode-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.14);
+$dark-mode-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.45);
 
 // Variables
 $bg-dark: $dark-gray;
-$bg-light: white;
+$bg-light: $pastel-red-light;
 
 // Typography
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,300&display=swap');
-$font-family-base: 'Montserrat', sans-serif;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,300&display=swap");
+$font-family-base: "Montserrat", sans-serif;
 
 // Functions
 // Mixins

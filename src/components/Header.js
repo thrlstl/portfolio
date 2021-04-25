@@ -10,7 +10,7 @@ function Header() {
     const separator = '//'
 
     return (
-        <div theme={theme} className='header'>
+        <div className='header' theme={theme}>
             {!isMobile ? <CustomIcon /> : null}
             <div className='header-content'>
                 <span className='header-text-container'>

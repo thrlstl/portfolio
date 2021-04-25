@@ -1,11 +1,13 @@
 import React, { useContext, useState, useEffect } from 'react'
 import MenuButton from './MenuButton'
 import FooterMenu from './FooterMenu'
-import isMobileContext from '../contexts/isMobileContext'
+import isMobileContext from '../../contexts/isMobileContext'
+import ThemeContext from '../../contexts/ThemeContext'
 
 function Footer() {
 
     const isMobile = useContext(isMobileContext)
+    const theme = useContext(ThemeContext)
     const [isMenuVisible, setIsMenuVisible] = useState(true)
     const [animationType, setAnimationType] = useState('enter')
 
@@ -26,7 +28,7 @@ function Footer() {
     }
 
     return(
-        <div className='footer'>
+        <div className='footer' theme={theme}>
             <MenuButton toggleMenu={toggleMenu} />
             <FooterMenu animationType={animationType}/>
         </div>
