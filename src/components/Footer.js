@@ -7,18 +7,19 @@ function Footer() {
 
     const isMobile = useContext(isMobileContext)
     const [isMenuVisible, setIsMenuVisible] = useState(true)
-
-    // useEffect(() => {
-    //     setIsMenuVisible(() => {
-    //       return isMobile
-    //       ? false
-    //       : true
-    //     })
-    //   }, [isMobile])
+    const [animationType, setAnimationType] = useState('enter')
 
     useEffect(() => {
         setIsMenuVisible(!isMobile)
     }, [isMobile])
+
+    useEffect(() => {
+        setAnimationType(() => {
+            return isMenuVisible
+            ? 'enter'
+            : 'exit'
+        })
+    }, [isMenuVisible])
 
     const toggleMenu = () => {
         setIsMenuVisible(!isMenuVisible)
@@ -27,7 +28,7 @@ function Footer() {
     return(
         <div className='footer'>
             <MenuButton toggleMenu={toggleMenu} />
-            {isMenuVisible ? <FooterMenu /> : null}
+            <FooterMenu animationType={animationType}/>
         </div>
     )
 }

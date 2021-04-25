@@ -30,8 +30,12 @@
 }
 
 .footer-menu {
-  animation: bounce-in-bottom 2s both;
-
+  &.enter {
+    animation: bounce-in-bottom 2s both;
+  }
+  &.exit {
+    animation: slide-out-bottom 0.5s both;
+  }
   position: absolute;
   z-index: 2;
   width: 100%;
@@ -79,5 +83,16 @@
   100% {
     transform: translateY(0);
     animation-timing-function: ease-out;
+  }
+}
+
+@keyframes slide-out-bottom {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(1000px);
+    opacity: 0;
   }
 }
