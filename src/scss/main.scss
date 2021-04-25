@@ -1,13 +1,12 @@
-@import './utils/utils';
-@import './components/_components-index';
+@import "./utils/utils";
+@import "./components/_components-index";
 
 .App {
-    height: 100vh;
-    // display: flex;
-    color: $opaque-white;
-    background-color: $bg-dark;
-    font-family: $font-family-base;
-    &.App[theme=light] {
-        background-color: $bg-light;
-    }
+  height: 100vh;
+  color: $opaque-white;
+  background-color: $bg-dark;
+  font-family: $font-family-base;
+  &.App[theme="light"] {
+    background-color: $bg-light;
+  }
 }
