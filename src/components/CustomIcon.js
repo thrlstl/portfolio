@@ -5,10 +5,10 @@ import iconConnector from '../assets/images/icon/icon-triangle-connector.png'
 
 function CustomIcon() {
     return(
-        <div class='icon-container'>
-            <img class='icon-connector' src={iconConnector} alt='icon-connector'></img>
-            <img class='icon-left' src={iconLeft} alt='icon-left'></img>
-            <img class='icon-right' src={iconRight} alt='icon-right'></img>
+        <div className='icon-container'>
+            <img className='icon-connector' src={iconConnector} alt='icon-connector'></img>
+            <img className='icon-left' src={iconLeft} alt='icon-left'></img>
+            <img className='icon-right' src={iconRight} alt='icon-right'></img>
         </div>
     )
 }

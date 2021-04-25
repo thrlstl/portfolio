@@ -19,9 +19,6 @@ function Header() {
                     <span className='header-title'>Software Engineer</span>
                 </span>
             </div>
-            {/* <div className='links-container'>
-                <img alt='tbd' className='icon'></img>
-            </div> */}
         </div>
     )
 }
