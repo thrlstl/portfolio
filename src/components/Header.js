@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
 import CustomIcon from './CustomIcon'
 import ThemeContext from '../contexts/ThemeContext'
-import isMobileContext from '../contexts/isMobileContext'
+// import isMobileContext from '../contexts/isMobileContext'
 
 function Header() {
 
     const theme = useContext(ThemeContext)
-    const isMobile = useContext(isMobileContext)
+    // const isMobile = useContext(isMobileContext)
     const separator = '//'
 
     return (

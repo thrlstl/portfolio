@@ -1,6 +1,6 @@
 import './scss/main.scss'
 import { useState, useEffect } from 'react'
-import Splash from './components/Splash'
+import SplashScreen from './components/SplashScreen'
 import Header from './components/Header'
 import Footer from './components/Footer/Footer'
 import { useMediaQuery } from 'react-responsive'
@@ -11,7 +11,7 @@ function App() {
 
   const [isLight] = useState(false)
   const [theme, setTheme] = useState('dark')
-  const [splashScreen, setSplashScreen] = useState(true)
+  const [splashScreenVisible, setSplashScreenVisible] = useState(true)
   const isMobile = useMediaQuery({ query: '(max-width: 576px)' })
 
   useEffect(() => {
@@ -24,7 +24,7 @@ function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      setSplashScreen(false)
+      setSplashScreenVisible(false)
     }, 1500)
   }, [])
 
@@ -41,8 +41,8 @@ function App() {
     <ThemeContext.Provider value={theme}>
       <isMobileContext.Provider value={isMobile}>
       <div className="App" theme={theme}>
-      {splashScreen
-      ? <Splash />
+      {splashScreenVisible
+      ? <SplashScreen />
       : <HomeStack />}
       </div>
       </isMobileContext.Provider>
