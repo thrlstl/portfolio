@@ -1,5 +1,5 @@
 import React from 'react'
-import myPhoto from '../../assets/images/profile-photo.png'
+import myPhoto from '../../assets/images/profile-photo.jpg'
 
 function ProfilePhoto() {
     return(
