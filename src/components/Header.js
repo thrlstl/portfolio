@@ -11,7 +11,8 @@ function Header() {
 
     return (
         <div className='header' theme={theme}>
-            {!isMobile ? <CustomIcon /> : null}
+            {/* {!isMobile ? <CustomIcon /> : null} */}
+            <CustomIcon />
             <div className='header-content'>
                 <span className='header-text-container'>
                     <span className='header-name'>Matthew Steele</span>

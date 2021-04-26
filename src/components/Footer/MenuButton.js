@@ -8,7 +8,7 @@ function MenuButton(props) {
     const theme = useContext(ThemeContext)
     const [iconType, setIconType] = useState(null)
     const [clicked, setClicked] = useState(false)
-    const [animationClass, setAnimationClass] = useState(null)
+    const [animationClass, setAnimationClass] = useState('')
 
     useEffect(() => {
         setIconType(() => {
@@ -22,7 +22,7 @@ function MenuButton(props) {
         setAnimationClass(() => {
             return clicked
             ? 'clicked'
-            : null
+            : ''
         })
     }, [clicked])
 
