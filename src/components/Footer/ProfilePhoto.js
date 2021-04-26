@@ -6,7 +6,7 @@ function ProfilePhoto() {
         <img 
         className='profile-photo' 
         src={myPhoto}
-        alt='profile-photo'></img>
+        alt='profile-icon'></img>
     )
 }
 
