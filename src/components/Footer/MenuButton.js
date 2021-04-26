@@ -7,6 +7,8 @@ function MenuButton(props) {
 
     const theme = useContext(ThemeContext)
     const [iconType, setIconType] = useState(null)
+    const [clicked, setClicked] = useState(false)
+    const [animationClass, setAnimationClass] = useState(null)
 
     useEffect(() => {
         setIconType(() => {
@@ -16,12 +18,26 @@ function MenuButton(props) {
         })
     }, [theme])
 
+    useEffect(() => {
+        setAnimationClass(() => {
+            return clicked
+            ? 'clicked'
+            : null
+        })
+    }, [clicked])
+
+    const handleClick = () => {
+        setClicked(!clicked)
+        props.toggleMenu()
+    }
+
     return(
         <div 
         className='menu-button-container'>
             <img 
-            onClick={() => props.toggleMenu()}
-            className='menu-button'
+            onClick={handleClick}
+            className={`menu-button ${animationClass}`}
+            onAnimationEnd={() => setClicked(!clicked)}
             src={iconType}
             alt='menu-icon'></img>
         </div>

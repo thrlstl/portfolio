@@ -30,7 +30,7 @@
   &:hover {
     opacity: 0.2;
   }
-  &:active {
+  &.clicked {
     animation: pulsate-bck 0.5s ease-in-out both;
   }
 }
@@ -88,7 +88,7 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(0.9);
+    transform: scale(0.5);
   }
   100% {
     transform: scale(1);
