@@ -27,9 +27,14 @@
   position: absolute;
   height: 100%;
   width: auto;
-  &:hover {
-    opacity: 0.2;
+  @media (min-width: 576px) {
+    &:hover {
+      opacity: 0.2;
+    }
   }
+  //   &:hover {
+  //     opacity: 0.2;
+  //   }
   &.clicked {
     animation: pulsate-bck 0.5s ease-in-out both;
   }

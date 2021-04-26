@@ -25,7 +25,7 @@ function App() {
   useEffect(() => {
     setTimeout(() => {
       setSplashScreenVisible(false)
-    }, 1500)
+    }, 2000)
   }, [])
 
   function HomeStack() {
