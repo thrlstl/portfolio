@@ -1,6 +1,7 @@
 import React, { useContext, useState, useEffect } from 'react'
 import MenuButton from './MenuButton'
 import FooterMenu from './FooterMenu'
+import ProfilePhoto from './ProfilePhoto'
 import isMobileContext from '../../contexts/isMobileContext'
 import ThemeContext from '../../contexts/ThemeContext'
 
@@ -30,6 +31,7 @@ function Footer() {
     return(
         <div className='footer' theme={theme}>
             <MenuButton toggleMenu={toggleMenu} />
+            <ProfilePhoto />
             <FooterMenu animationType={animationType}/>
         </div>
     )
