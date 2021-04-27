@@ -9,7 +9,6 @@ import GithubWhite from '../../assets/images/links/github-white.png'
 import BlogBlack from '../../assets/images/links/rss-black.png'
 import BlogWhite from '../../assets/images/links/rss-white.png'
 
-
 // Links Data
 const linkIcons = [
     {

@@ -3,18 +3,16 @@ import ThemeContext from '../../contexts/ThemeContext'
 
 function LinkIcon(props) {
 
-    const lightIcon = props.light
-    const darkIcon = props.dark
     const name = props.name
     const link = props.link
     const theme = useContext(ThemeContext)
-    const [image, setImage] = useState(darkIcon)
+    const [image, setImage] = useState(props.dark)
 
     useEffect(() => {
         setImage(() => {
             return theme === 'light'
-            ? lightIcon
-            : darkIcon
+            ? props.light
+            : props.dark
         })
     }, [theme])
 

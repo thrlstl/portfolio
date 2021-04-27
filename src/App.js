@@ -9,7 +9,7 @@ import isMobileContext from './contexts/isMobileContext'
 
 function App() {
 
-  const [isLight] = useState(false)
+  const [isLight] = useState(true)
   const [theme, setTheme] = useState('dark')
   const [splashScreenVisible, setSplashScreenVisible] = useState(true)
   const isMobile = useMediaQuery({ query: '(max-width: 576px)' })
