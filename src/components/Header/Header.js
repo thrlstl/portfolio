@@ -1,7 +1,8 @@
 import React, { useContext } from 'react'
-import CustomIcon from './CustomIcon'
-import ThemeContext from '../contexts/ThemeContext'
-import isMobileContext from '../contexts/isMobileContext'
+import CustomIcon from '../CustomIcon'
+import Links from '../Header/Links'
+import ThemeContext from '../../contexts/ThemeContext'
+import isMobileContext from '../../contexts/isMobileContext'
 
 function Header() {
 
@@ -19,6 +20,7 @@ function Header() {
                     <span className='header-title'>Software Engineer</span>
                 </span>
             </div>
+            <Links />
         </div>
     )
 }

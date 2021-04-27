@@ -9,6 +9,11 @@ $dark-gray: #202124;
 $light-gray: #2c2d31;
 $lighter-gray: #46484e;
 $highlight-gray: #b0b1b7;
+$icon-gradient: linear-gradient(
+  190deg,
+  rgba(32, 33, 36, 1) 0%,
+  rgba(70, 72, 78, 1) 100%
+);
 $opaque-white: rgba(white, 0.75);
 $pastel-red: #e06060;
 $pastel-red-light: #ffa2a2;
@@ -17,6 +22,7 @@ $pastel-blue: #50cddc;
 //Box Shadow
 $light-mode-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.14);
 $dark-mode-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.45);
+$icon-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 
 // Variables
 $bg-dark: $dark-gray;

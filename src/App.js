@@ -1,7 +1,7 @@
 import './scss/main.scss'
 import { useState, useEffect } from 'react'
 import SplashScreen from './components/SplashScreen'
-import Header from './components/Header'
+import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import { useMediaQuery } from 'react-responsive'
 import ThemeContext from './contexts/ThemeContext'
@@ -40,11 +40,11 @@ function App() {
   return (
     <ThemeContext.Provider value={theme}>
       <isMobileContext.Provider value={isMobile}>
-      <div className="App" theme={theme}>
-      {splashScreenVisible
-      ? <SplashScreen />
-      : <HomeStack />}
-      </div>
+        <div className="App" theme={theme}>
+          {splashScreenVisible
+          ? <SplashScreen />
+          : <HomeStack />}
+        </div>
       </isMobileContext.Provider>
     </ThemeContext.Provider>
   );
