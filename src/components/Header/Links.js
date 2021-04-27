@@ -33,7 +33,7 @@ const linkIcons = [
 
 const renderLinks = () => {
     return linkIcons.map(link => {
-        return <LinkIcon {...link}/>
+        return <LinkIcon key={link.name} {...link}/>
     })
 }
 
