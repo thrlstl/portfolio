@@ -1,15 +1,22 @@
 import React, { useContext } from 'react'
-import ThemeContext from '../../contexts/ThemeContext'
+import MenuItems from './MenuItems'
+import FooterIcons from './FooterIcons'
+import isTabletOrMobileContext from '../../contexts/isTabletOrMobileContext'
 
 function FooterMenu(props) {
 
+    const menuType = props.menuType
     const animationType = props.animationType
-    const theme = useContext(ThemeContext)
+    const theme = props.theme
+    const isTabletOrMobile = useContext(isTabletOrMobileContext)
 
     return(
         <div 
-        className={`footer-menu ${animationType}`} 
-        theme={theme}>
+            className={`new-menu ${menuType} ${animationType}`}
+            theme={theme}>
+            { isTabletOrMobile ? 
+            <FooterIcons /> : null }
+            <MenuItems />
         </div>
     )
 }

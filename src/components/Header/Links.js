@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState, useEffect, useContext } from 'react'
 import LinkIcon from '../../components/Header/LinkIcon'
+import isTabletOrMobileContext from '../../contexts/isTabletOrMobileContext'
 
 // Link Icon Sources
 import LinkedInBlack from '../../assets/images/links/linkedin-black.png'
@@ -31,15 +32,27 @@ const linkIcons = [
     }
 ]
 
-const renderLinks = () => {
-    return linkIcons.map(link => {
-        return <LinkIcon key={link.name} {...link}/>
-    })
-}
-
 function Links() {
+
+    const isTabletOrMobile = useContext(isTabletOrMobileContext)
+    const [styleType, setStyleType] = useState(null)
+
+    useEffect(() => {
+        setStyleType(() => {
+            return isTabletOrMobile
+            ? 'mobile'
+            : 'desktop'
+        })
+    }, [isTabletOrMobile])
+    
+    const renderLinks = () => {
+        return linkIcons.map(link => {
+            return <LinkIcon key={link.name} {...link}/>
+        })
+    }
+
     return(
-        <div className='header-links-container'>
+        <div className='links-container' type={styleType}>
             {renderLinks()}
         </div>
     )

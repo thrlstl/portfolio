@@ -86,7 +86,7 @@
   }
 }
 
-.header-links-container {
+.links-container {
   margin-right: 2%;
   align-items: center;
   justify-content: center;
@@ -95,6 +95,11 @@
   column-gap: 1vw;
   width: min-content;
   height: min-content;
+  &[type="mobile"] {
+    column-gap: 3vw;
+    margin-left: 28.5vw;
+    margin-right: auto;
+  }
 }
 
 .link:hover {
@@ -110,8 +115,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 4.5vw;
-  height: 4.5vw;
+  width: 6.5vw;
+  height: 6.5vw;
   border-radius: 25%;
   opacity: 0.5;
   box-shadow: $icon-shadow;

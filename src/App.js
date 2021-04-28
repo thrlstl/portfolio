@@ -1,18 +1,18 @@
 import './scss/main.scss'
 import { useState, useEffect } from 'react'
+import { useMediaQuery } from 'react-responsive'
 import SplashScreen from './components/SplashScreen'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
-import { useMediaQuery } from 'react-responsive'
 import ThemeContext from './contexts/ThemeContext'
-import isMobileContext from './contexts/isMobileContext'
+import isTabletOrMobileContext from './contexts/isTabletOrMobileContext'
 
 function App() {
 
-  const [isLight] = useState(true)
+  const [isLight] = useState(false)
   const [theme, setTheme] = useState('dark')
   const [splashScreenVisible, setSplashScreenVisible] = useState(true)
-  const isMobile = useMediaQuery({ query: '(max-width: 576px)' })
+  const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' })
 
   useEffect(() => {
     setTheme(() => {
@@ -39,13 +39,13 @@ function App() {
 
   return (
     <ThemeContext.Provider value={theme}>
-      <isMobileContext.Provider value={isMobile}>
+      <isTabletOrMobileContext.Provider value={isTabletOrMobile}>
         <div className="App" theme={theme}>
-          {splashScreenVisible
-          ? <SplashScreen />
-          : <HomeStack />}
+            {splashScreenVisible
+            ? <SplashScreen />
+            : <HomeStack />}
         </div>
-      </isMobileContext.Provider>
+      </isTabletOrMobileContext.Provider>
     </ThemeContext.Provider>
   );
 }

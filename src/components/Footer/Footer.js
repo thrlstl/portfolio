@@ -1,20 +1,29 @@
 import React, { useContext, useState, useEffect } from 'react'
 import MenuButton from './MenuButton'
-import FooterMenu from './FooterMenu'
 import ProfilePhoto from './ProfilePhoto'
-import isMobileContext from '../../contexts/isMobileContext'
+import isTabletOrMobileContext from '../../contexts/isTabletOrMobileContext'
 import ThemeContext from '../../contexts/ThemeContext'
+import FooterMenu from './FooterMenu'
 
 function Footer() {
 
-    const isMobile = useContext(isMobileContext)
+    const isTabletOrMobile = useContext(isTabletOrMobileContext)
     const theme = useContext(ThemeContext)
     const [isMenuVisible, setIsMenuVisible] = useState(true)
+    const [menuType, setMenuType] = useState(null)
     const [animationType, setAnimationType] = useState('enter')
 
     useEffect(() => {
-        setIsMenuVisible(!isMobile)
-    }, [isMobile])
+        return isTabletOrMobile
+        ? setIsMenuVisible(!isTabletOrMobile)
+        : null
+    }, [isTabletOrMobile])
+
+    useEffect(() => {
+        return isTabletOrMobile
+        ? setMenuType('mobile-menu')
+        : setMenuType('desktop-menu')
+    }, [isTabletOrMobile])
 
     useEffect(() => {
         setAnimationType(() => {
@@ -31,8 +40,11 @@ function Footer() {
     return(
         <div className='footer' theme={theme}>
             <MenuButton toggleMenu={toggleMenu} />
+                <FooterMenu 
+                menuType={menuType} 
+                animationType={animationType}
+                theme={theme} />
             <ProfilePhoto />
-            <FooterMenu animationType={animationType}/>
         </div>
     )
 }

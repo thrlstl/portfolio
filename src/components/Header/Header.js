@@ -2,17 +2,16 @@ import React, { useContext } from 'react'
 import CustomIcon from '../CustomIcon'
 import Links from '../Header/Links'
 import ThemeContext from '../../contexts/ThemeContext'
-import isMobileContext from '../../contexts/isMobileContext'
+import isTableOrMobileContext from '../../contexts/isTabletOrMobileContext'
 
 function Header() {
 
     const theme = useContext(ThemeContext)
-    const isMobile = useContext(isMobileContext)
+    const isTabletOrMobile = useContext(isTableOrMobileContext)
     const separator = '//'
 
-    return (
-        <div className='header' theme={theme}>
-            {!isMobile ? <CustomIcon /> : null}
+    function HeaderContent() {
+        return(
             <div className='header-content'>
                 <span className='header-text-container'>
                     <span className='header-name'>Matthew Steele</span>
@@ -20,7 +19,14 @@ function Header() {
                     <span className='header-title'>Software Engineer</span>
                 </span>
             </div>
-            <Links />
+        )
+    }
+
+    return (
+        <div className='header' theme={theme}>
+            {!isTabletOrMobile ? <CustomIcon /> : null}
+            <HeaderContent />
+            {!isTabletOrMobile ? <Links /> : null}
         </div>
     )
 }
