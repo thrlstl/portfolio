@@ -119,6 +119,29 @@
     height: 76px;
     width: min-content;
   }
+  @media (max-width: 768px) {
+    &.selected {
+      animation: mobile-menu-item-selected 0.2s ease-in-out both;
+      &.selected[theme="light"] {
+        animation: mobile-menu-item-selected-light 0.2s ease-in-out both;
+      }
+    }
+    // &.deselected {
+    //   -webkit-animation: menu-item-deselected 0.2s ease-in-out both;
+    //   animation: menu-item-deselected 0.2s ease-in-out both;
+    // }
+  }
+}
+
+.menu-item-link {
+  text-decoration: none;
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link,
+  &:active {
+    text-decoration: none;
+  }
 }
 
 .menu-item-name {
@@ -128,6 +151,8 @@
   color: $opaque-white;
   font-size: 3vw;
   font-weight: 500;
+  border-bottom: 2px solid transparent;
+  transition: border 0.5s ease-in-out;
   @media (min-width: 768px) {
     font-size: 23px;
   }
@@ -136,6 +161,19 @@
   }
   @media (max-width: 367px) {
     font-size: 4.5vw;
+  }
+  &:hover {
+    color: white;
+  }
+  &.selected {
+    border-bottom: 2px solid $pastel-blue;
+    transition: border 0.5s ease-in-out;
+    -webkit-animation: menu-item-selected 0.2s ease-in-out both;
+    animation: menu-item-selected 0.2s ease-in-out both;
+  }
+  &.deselected {
+    -webkit-animation: menu-item-deselected 0.2s ease-in-out both;
+    animation: menu-item-deselected 0.2s ease-in-out both;
   }
 }
 
@@ -166,5 +204,73 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@-webkit-keyframes menu-item-selected {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@keyframes menu-item-selected {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+@-webkit-keyframes menu-item-deselected {
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes menu-item-deselected {
+  0% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@keyframes mobile-menu-item-selected {
+  0% {
+    background-color: $light-gray;
+  }
+  50% {
+    background-color: $opaque-light-gray;
+  }
+  100% {
+    background-color: $light-gray;
+  }
+}
+
+@keyframes mobile-menu-item-selected-light {
+  0% {
+    background-color: white;
+  }
+  50% {
+    background-color: $opaque-white;
+  }
+  100% {
+    background-color: white;
   }
 }
