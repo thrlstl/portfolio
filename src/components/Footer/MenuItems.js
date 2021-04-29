@@ -1,11 +1,15 @@
 import React from 'react'
 import MenuData from './MenuData'
+import MenuItem from './MenuItem'
+import { Link } from "react-router-dom";
 
 function MenuItems() {
     return MenuData.map(item => {
-        return <div className='menu-item' key={item.name}>
-                <span className='menu-item-name'>{ item.name ? item.name : null }</span>
-                </div>
+        return(
+            <Link to={item.route} key={item.name}>
+                <MenuItem {...item} />
+            </Link>
+        )
     })
 }
 
