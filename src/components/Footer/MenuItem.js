@@ -17,7 +17,7 @@ function MenuItem(props) {
             ? 'selected'
             : 'deselected'
         })
-    }, [location])
+    }, [location, itemRoute, currentRoute])
 
     return(
         <div
