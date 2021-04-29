@@ -4,7 +4,7 @@
   z-index: 1;
   align-items: center;
   width: 100vw;
-  height: 10vmin;
+  height: 15vw;
   bottom: 0;
   @media (min-width: 768px) {
     height: 76px;
@@ -148,7 +148,7 @@
   height: min-content;
   width: min-content;
   color: $opaque-white;
-  font-size: 3.5vw;
+  font-size: 4.5vw;
   font-weight: 500;
   border-bottom: 2px solid transparent;
   transition: border 0.5s ease-in-out;

@@ -1,15 +1,20 @@
 .profile-photo {
   position: relative;
   z-index: 4;
-  height: 180%;
+  height: 150%;
   width: auto;
   margin-left: auto;
   margin-right: 4%;
-  bottom: 75%;
+  bottom: 50%;
   border: thick solid $light-gray;
   border-radius: 100%;
   box-shadow: $dark-mode-shadow;
   animation: pulsate-bck 0.5s ease-in-out 2 both;
+  @media (min-width: 768px) {
+    bottom: 75%;
+    height: 180%;
+    width: auto;
+  }
   &.profile-photo[theme="light"] {
     border: thick solid $pastel-blue;
   }
