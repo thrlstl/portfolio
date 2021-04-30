@@ -3,8 +3,8 @@ import { useState, useEffect } from 'react'
 import { useMediaQuery } from 'react-responsive'
 
 import SplashScreen from './components/SplashScreen'
-import Header from './components/header/Header'
-import Footer from './components/footer/Footer'
+import Header from './components/Header/Header'
+import Footer from './components/Footer/Footer'
 import PageContainer from './components/pages/PageContainer'
 import CurrentPage from './components/pages/CurrentPage'
 
