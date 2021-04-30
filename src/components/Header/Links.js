@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react'
-import LinkIcon from '../../components/Header/LinkIcon'
+import LinkIcon from './LinkIcon'
 import isTabletOrMobileContext from '../../contexts/isTabletOrMobileContext'
 
 // Link Icon Sources

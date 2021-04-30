@@ -1,5 +1,6 @@
 .header {
   position: fixed;
+  top: 0;
   display: flex;
   align-items: center;
   width: 100vw;
@@ -84,60 +85,6 @@
   @media (max-width: 367px) {
     font-size: 4.5vw;
   }
-}
-
-.links-container {
-  margin-right: 2%;
-  align-items: center;
-  justify-content: center;
-  display: grid;
-  grid-auto-flow: column;
-  column-gap: 1vw;
-  width: min-content;
-  height: min-content;
-  &[type="mobile"] {
-    column-gap: 3vw;
-    margin-left: 24.25vw;
-    margin-right: auto;
-  }
-}
-
-.link:hover {
-  .link-container[theme="dark"] {
-    opacity: 0.2;
-  }
-  .link-container[theme="light"] {
-    opacity: 0.5;
-  }
-}
-
-.link-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 6.5vw;
-  height: 6.5vw;
-  border-radius: 25%;
-  opacity: 0.5;
-  box-shadow: $icon-shadow;
-  &.link-container[theme="dark"] {
-    opacity: 0.5;
-    background: $icon-gradient;
-  }
-  &.link-container[theme="light"] {
-    opacity: 1;
-    background: white;
-  }
-  @media (min-width: 768px) {
-    width: 34.56px;
-    height: 34.56px;
-  }
-}
-
-.link-icon {
-  position: relative;
-  width: 50%;
-  height: auto;
 }
 
 @keyframes tracking-in-expand {

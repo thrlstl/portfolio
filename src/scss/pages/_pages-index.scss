@@ -1,0 +1,30 @@
+@import "./projects-page";
+@import "./about-page";
+@import "./resume-page";
+@import "./contact-page";
+
+.page-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10vw;
+  margin-bottom: 15vw;
+  height: calc(100vh - 25vw);
+  width: 100vw;
+  @media (max-width: 576px) {
+    height: calc(100vh - 15vw - 57.6px);
+    margin-top: 57.6px;
+    margin-bottom: 15vw;
+  }
+  @media (min-width: 576px) {
+    height: calc(100vh - 25vw);
+    margin-top: 10vw;
+    margin-bottom: 15vw;
+  }
+  @media (min-width: 768px) {
+    height: calc(100vh - 152px);
+    margin-top: 76px;
+    margin-bottom: 76px;
+  }
+}

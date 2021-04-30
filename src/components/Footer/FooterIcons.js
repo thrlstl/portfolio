@@ -1,6 +1,6 @@
 import React from 'react'
 import CustomIcon from '../CustomIcon'
-import Links from '../Header/Links'
+import Links from '../header/Links'
 
 function FooterIcons() {
     return(

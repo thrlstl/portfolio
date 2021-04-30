@@ -2,7 +2,7 @@ import React from 'react'
 
 function ResumePage() {
     return(
-        <div className='resume-page'></div>
+        <h1>Resume (in progress)</h1>
     )
 }
 

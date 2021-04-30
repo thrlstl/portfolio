@@ -1,15 +1,12 @@
 import './scss/main.scss'
 import { useState, useEffect } from 'react'
 import { useMediaQuery } from 'react-responsive'
-import { Switch, Route } from 'react-router-dom';
 
 import SplashScreen from './components/SplashScreen'
-import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
-import AboutPage from './components/pages/AboutPage'
-import ContactPage from './components/pages/ContactPage'
-import ProjectsPage from './components/pages/ProjectsPage'
-import ResumePage from './components/pages/ResumePage'
+import Header from './components/header/Header'
+import Footer from './components/footer/Footer'
+import PageContainer from './components/pages/PageContainer'
+import CurrentPage from './components/pages/CurrentPage'
 
 import ThemeContext from './contexts/ThemeContext'
 import isTabletOrMobileContext from './contexts/isTabletOrMobileContext'
@@ -39,13 +36,9 @@ function App() {
     return(
       <>
         <Header />
-          <Switch>
-              <Route exact path='/' component={AboutPage}/>
-              <Route exact path='/about' component={AboutPage}/>
-              <Route exact path='/contact' component={ContactPage}/>
-              <Route exact path='/projects' component={ProjectsPage}/>
-              <Route exact path='/resume' component={ResumePage}/>
-          </Switch>
+          <PageContainer>
+            <CurrentPage />
+          </PageContainer>
         <Footer />
       </>
     )
@@ -55,9 +48,9 @@ function App() {
     <ThemeContext.Provider value={theme}>
       <isTabletOrMobileContext.Provider value={isTabletOrMobile}>
         <div className="App" theme={theme}>
-            {splashScreenVisible
+            { splashScreenVisible
             ? <SplashScreen />
-            : <HomeStack />}
+            : <HomeStack /> }
         </div>
       </isTabletOrMobileContext.Provider>
     </ThemeContext.Provider>
