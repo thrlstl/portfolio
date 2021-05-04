@@ -4,8 +4,9 @@
 @import "./contact-page";
 
 .page-container {
-  // position: fixed;
+  position: fixed;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-top: 10vw;
