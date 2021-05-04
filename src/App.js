@@ -13,7 +13,7 @@ import isTabletOrMobileContext from './contexts/isTabletOrMobileContext'
 
 function App() {
 
-  const [toggle, setToggle] = useState(true)
+  const [toggle] = useState(true)
   const [theme, setTheme] = useState('dark')
   const [splashScreenVisible, setSplashScreenVisible] = useState(true)
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' })
@@ -31,14 +31,14 @@ function App() {
       setSplashScreenVisible(false)
     }, 2000)
   }, [])
-  
+
   function HomeStack() {
-    return(
+    return (
       <>
         <Header />
-          <PageContainer>
-            <CurrentPage />
-          </PageContainer>
+        <PageContainer>
+          <CurrentPage />
+        </PageContainer>
         <Footer />
       </>
     )
@@ -48,9 +48,9 @@ function App() {
     <ThemeContext.Provider value={theme}>
       <isTabletOrMobileContext.Provider value={isTabletOrMobile}>
         <div className="App" theme={theme}>
-            { splashScreenVisible
+          {splashScreenVisible
             ? <SplashScreen />
-            : <HomeStack /> }
+            : <HomeStack />}
         </div>
       </isTabletOrMobileContext.Provider>
     </ThemeContext.Provider>
