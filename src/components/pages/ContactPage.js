@@ -1,5 +1,4 @@
 import React from 'react'
-import Links from '../Header/Links'
 
 function ContactPage() {
     return(
