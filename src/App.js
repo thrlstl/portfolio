@@ -13,25 +13,25 @@ import isTabletOrMobileContext from './contexts/isTabletOrMobileContext'
 
 function App() {
 
-  const [isLight] = useState(false)
+  const [toggle, setToggle] = useState(true)
   const [theme, setTheme] = useState('dark')
   const [splashScreenVisible, setSplashScreenVisible] = useState(true)
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' })
 
   useEffect(() => {
     setTheme(() => {
-      return isLight
-        ? 'light'
-        : 'dark'
+      return toggle
+        ? 'dark'
+        : 'light'
     })
-  }, [isLight])
+  }, [toggle])
 
   useEffect(() => {
     setTimeout(() => {
       setSplashScreenVisible(false)
     }, 2000)
   }, [])
-
+  
   function HomeStack() {
     return(
       <>

@@ -4,7 +4,7 @@
 @import "./contact-page";
 
 .page-container {
-  position: fixed;
+  // position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,6 +12,7 @@
   margin-bottom: 15vw;
   height: calc(100vh - 25vw);
   width: 100vw;
+  overflow: scroll;
   @media (max-width: 576px) {
     height: calc(100vh - 15vw - 57.6px);
     margin-top: 57.6px;

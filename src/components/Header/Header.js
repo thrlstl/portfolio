@@ -5,7 +5,7 @@ import HeaderContent from './HeaderContent'
 import ThemeContext from '../../contexts/ThemeContext'
 import isTableOrMobileContext from '../../contexts/isTabletOrMobileContext'
 
-function Header() {
+function Header(props) {
 
     const theme = useContext(ThemeContext)
     const isTabletOrMobile = useContext(isTableOrMobileContext)
