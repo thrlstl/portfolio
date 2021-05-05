@@ -1,11 +1,15 @@
 .footer {
   position: fixed;
+  background-color: $light-gray;
   display: flex;
   z-index: 1;
   align-items: center;
   width: 100vw;
   height: 15vw;
   bottom: 0;
+  @media (min-width: 576px) {
+    background-color: $dark-gray;
+  }
   @media (min-width: 768px) {
     height: 76px;
   }
