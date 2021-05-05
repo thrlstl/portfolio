@@ -7,8 +7,14 @@
   width: 100vw;
   height: 15vw;
   bottom: 0;
+  &[theme="light"] {
+    background-color: white;
+  }
   @media (min-width: 576px) {
     background-color: $dark-gray;
+    &[theme="light"] {
+      background-color: $pastel-red-light;
+    }
   }
   @media (min-width: 768px) {
     height: 76px;
