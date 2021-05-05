@@ -33,13 +33,16 @@ function App() {
   }, [])
 
   function HomeStack() {
+
+    const [isPageExpanded, setIsPageExpanded] = useState(false)
+
     return (
       <>
         <Header />
-        <PageContainer>
+        <PageContainer isPageExpanded={isPageExpanded}>
           <CurrentPage />
         </PageContainer>
-        <Footer />
+        <Footer setIsPageExpanded={setIsPageExpanded} />
       </>
     )
   }
@@ -47,11 +50,11 @@ function App() {
   return (
     <ThemeContext.Provider value={theme}>
       <isTabletOrMobileContext.Provider value={isTabletOrMobile}>
-        <div className="App" theme={theme}>
-          {splashScreenVisible
-            ? <SplashScreen />
-            : <HomeStack />}
-        </div>
+          <div className="App" theme={theme}>
+            { splashScreenVisible
+              ? <SplashScreen />
+              : <HomeStack /> }
+          </div>
       </isTabletOrMobileContext.Provider>
     </ThemeContext.Provider>
   );

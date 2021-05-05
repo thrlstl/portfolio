@@ -8,8 +8,10 @@
   width: min-content;
   height: min-content;
   &[type="mobile"] {
+    // position: absolute;
     column-gap: 3vw;
     margin-left: 24.25vw;
+    // margin-left: auto;
     margin-right: auto;
   }
 }

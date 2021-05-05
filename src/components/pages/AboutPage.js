@@ -1,10 +1,21 @@
 import React from 'react'
+import SignatureBlack from '../../assets/images/about/signature-black.png'
+import SignatureWhite from '../../assets/images/about/signature-white.png'
 
-function AboutPage() {
+function Signature() {
     return(
-        <div className='about-content-container'>
-        <h2 className='intro'>Hey there,</h2>
-        <h1 className='intro-2'>I'm Matthew! 🤓</h1>
+        <div className='signature-container'>
+            <img className='signature' src={SignatureWhite} alt='signature' />
+        </div>
+    )
+}
+
+function AboutPageBio() {
+
+    return(
+        <div className='bio-container'>
+            <h2 className='intro'>Hey there,</h2>
+            <h1 className='intro-2'>I'm Matthew!</h1>
         <p>
             I'm a Software Engineer and design-thinker 
             motivated to improve lives through people-first solutions. 
@@ -33,6 +44,15 @@ function AboutPage() {
             celebrates my identity, values my unique contributions, and empowers a 
             diverse workforce.
         </p>
+        </div>
+    )
+}
+
+function AboutPage() {
+    return(
+        <div className='about-content-container'>
+            <AboutPageBio />
+            <Signature />
         </div>
     )
 }

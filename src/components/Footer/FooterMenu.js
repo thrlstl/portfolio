@@ -12,7 +12,7 @@ function FooterMenu(props) {
 
     return(
         <div 
-            className={`new-menu ${menuType} ${animationType}`}
+            className={`${menuType} ${animationType}`}
             theme={theme}>
             { isTabletOrMobile ? 
             <FooterIcons /> : null }

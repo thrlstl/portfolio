@@ -5,10 +5,6 @@
 
 .page-container {
   position: fixed;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-top: 10vw;
   margin-bottom: 15vw;
   height: calc(100vh - 25vw);
@@ -28,5 +24,9 @@
     height: calc(100vh - 152px);
     margin-top: 76px;
     margin-bottom: 76px;
+  }
+  &.about {
+    display: flex;
+    align-items: center;
   }
 }

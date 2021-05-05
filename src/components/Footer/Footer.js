@@ -1,11 +1,11 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useContext, useState, useEffect, useCallback } from 'react'
 import MenuButton from './MenuButton'
 import ProfilePhoto from './ProfilePhoto'
 import isTabletOrMobileContext from '../../contexts/isTabletOrMobileContext'
 import ThemeContext from '../../contexts/ThemeContext'
 import FooterMenu from './FooterMenu'
 
-function Footer() {
+function Footer(props) {
 
     const isTabletOrMobile = useContext(isTabletOrMobileContext)
     const theme = useContext(ThemeContext)
@@ -31,6 +31,12 @@ function Footer() {
             ? 'enter'
             : 'exit'
         })
+    }, [isMenuVisible])
+
+    useEffect(() => {
+        return isMenuVisible === null
+        ? null
+        : props.setIsPageExpanded(!isMenuVisible)
     }, [isMenuVisible])
 
     const toggleMenu = () => {
