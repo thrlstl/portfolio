@@ -34,15 +34,13 @@ function App() {
 
   function HomeStack() {
 
-    const [isPageExpanded, setIsPageExpanded] = useState(false)
-
     return (
       <>
         <Header />
-        <PageContainer isPageExpanded={isPageExpanded}>
-          <CurrentPage />
-        </PageContainer>
-        <Footer setIsPageExpanded={setIsPageExpanded} />
+          <PageContainer>
+            <CurrentPage />
+          </PageContainer>
+        <Footer />
       </>
     )
   }

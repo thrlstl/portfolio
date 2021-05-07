@@ -33,12 +33,6 @@ function Footer(props) {
         })
     }, [isMenuVisible])
 
-    useEffect(() => {
-        return isMenuVisible === null
-        ? null
-        : props.setIsPageExpanded(!isMenuVisible)
-    }, [isMenuVisible])
-
     const toggleMenu = () => {
         setIsMenuVisible(!isMenuVisible)
     }
