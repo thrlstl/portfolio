@@ -1,20 +1,17 @@
-.about-content-container {
-  position: relative;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  max-height: 95%;
-}
-
 .bio-container {
+  position: relative;
+  z-index: 2;
+  margin-left: 6%;
+  margin-right: 6%;
   max-width: 445px;
+  @media (max-width: 768px) {
+    margin-top: 6%;
+  }
 }
 
 .signature-container {
-  background: none;
-  max-width: 165px;
-  min-width: none;
-  width: 20vw;
+  width: 40%;
+  min-width: 135px;
 }
 
 .signature {
@@ -24,4 +21,40 @@
 .intro,
 .intro-2 {
   margin: 0;
+}
+
+.background-images-container {
+  z-index: 1;
+  position: absolute;
+  width: 50vw;
+  height: fit-content;
+  max-width: 700px;
+  right: 6%;
+  bottom: 10%;
+  @media (max-width: 768px) {
+    margin-left: 6%;
+    margin-bottom: 10vw;
+    bottom: 0%;
+    right: 0;
+    position: relative;
+    width: 75%;
+  }
+}
+
+.background-image {
+  position: relative;
+  left: 35px;
+  z-index: 2;
+  width: 100%;
+  height: auto;
+}
+
+.background-shadow {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  bottom: -15px;
+  z-index: 1;
+  width: 100%;
+  height: auto;
 }

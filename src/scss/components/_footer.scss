@@ -10,7 +10,7 @@
   &[theme="light"] {
     background-color: white;
   }
-  @media (min-width: 576px) {
+  @media (min-width: 768px) {
     background-color: $dark-gray;
     &[theme="light"] {
       background-color: $pastel-red-light;

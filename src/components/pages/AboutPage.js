@@ -1,16 +1,30 @@
-import React from 'react'
+import React, { useContext, useState, useEffect } from 'react'
+import ThemeContext from '../../contexts/ThemeContext'
 import SignatureBlack from '../../assets/images/about/signature-black.png'
 import SignatureWhite from '../../assets/images/about/signature-white.png'
+import BackgroundImageDark from '../../assets/images/about/background-image-dark.png'
+import BackgroundImageLight from '../../assets/images/about/background-image-light.png'
+import BackgroundShadowBlue from '../../assets/images/about/background-shadow-blue.png'
+import BackgroundShadowRed from '../../assets/images/about/background-shadow-red.png'
 
-function Signature() {
+function Signature(props) {
     return(
         <div className='signature-container'>
-            <img className='signature' src={SignatureWhite} alt='signature' />
+            <img className='signature' src={props.src} alt='signature' />
         </div>
     )
 }
 
-function AboutPageBio() {
+function BackgroundImages(props) {
+    return(
+        <div className='background-images-container'>
+            <img className='background-image' src={props.backgroundImage} alt='self-portrait'/>
+            <img className='background-shadow' src={props.backgroundShadow} alt='self-portrait-shadow' />
+        </div>
+    )
+}
+
+function Bio(props) {
 
     return(
         <div className='bio-container'>
@@ -44,16 +58,39 @@ function AboutPageBio() {
             celebrates my identity, values my unique contributions, and empowers a 
             diverse workforce.
         </p>
+        <Signature src={props.signature} />
         </div>
     )
 }
 
 function AboutPage() {
+
+    const theme = useContext(ThemeContext)
+    const [images, setImages] = useState({
+        signature: null,
+        backgroundImage: null,
+        backgroundShadow: null,
+    })
+
+    useEffect(() => {
+        setImages(() => {
+            return theme === 'light'
+            ? { signature: SignatureBlack,
+                backgroundImage: BackgroundImageLight,
+                backgroundShadow: BackgroundShadowRed }
+            : { signature: SignatureWhite,
+                backgroundImage: BackgroundImageDark,
+                backgroundShadow: BackgroundShadowBlue }
+        })
+    }, [theme])
+
     return(
-        <div className='about-content-container'>
-            <AboutPageBio />
-            <Signature />
-        </div>
+        <>
+            <Bio signature={images.signature} />
+            <BackgroundImages 
+            backgroundImage={images.backgroundImage}
+            backgroundShadow={images.backgroundShadow} />
+        </>
     )
 }
 
