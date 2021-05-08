@@ -1,11 +1,11 @@
-import React, { useContext, useState, useEffect, useCallback } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import MenuButton from './MenuButton'
 import ProfilePhoto from './ProfilePhoto'
 import isTabletOrMobileContext from '../../contexts/isTabletOrMobileContext'
 import ThemeContext from '../../contexts/ThemeContext'
 import FooterMenu from './FooterMenu'
 
-function Footer(props) {
+function Footer() {
 
     const isTabletOrMobile = useContext(isTabletOrMobileContext)
     const theme = useContext(ThemeContext)
