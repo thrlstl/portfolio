@@ -63,6 +63,34 @@ function Bio(props) {
     )
 }
 
+function QuickFacts() {
+    return(
+        <div className='quick-facts-container'>
+            {/* <div className='location-container'>
+                <p className='location'>Current City — Chicago, IL</p>
+            </div> */}
+            <div className='quick-facts-content'>
+                <div className='favorites'>
+                    <p>favorites</p>
+                    <p>iced americano</p>
+                    <p>mariah carey</p>
+                    <p>blue</p>
+                    <p>sichuan</p>
+                    <p>photoshop</p>
+                </div>
+                <div className='hobbies'>
+                    <p>hobbies</p>
+                    <p>music production</p>
+                    <p>biking</p>
+                    <p>cooking</p>
+                    <p>traveling</p>
+                    <p>reading</p>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 function AboutPage() {
 
     const theme = useContext(ThemeContext)
@@ -87,6 +115,7 @@ function AboutPage() {
     return(
         <>
             <Bio signature={images.signature} />
+            <QuickFacts />
             <BackgroundImages 
             backgroundImage={images.backgroundImage}
             backgroundShadow={images.backgroundShadow} />
