@@ -46,12 +46,14 @@
   }
   @media (min-width: 1440px) {
     right: 15%;
+    bottom: 10%;
   }
 }
 
 .background-image {
   width: 50vw;
   max-width: 700px;
+  max-height: 100%;
   height: auto;
   z-index: 2;
   @media (max-width: 768px) {
