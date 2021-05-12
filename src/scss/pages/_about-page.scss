@@ -33,7 +33,7 @@
   justify-content: center;
   position: absolute;
   width: 50vw;
-  height: fit-content;
+  height: auto;
   max-width: 700px;
   right: 8%;
   bottom: 10%;
@@ -74,6 +74,7 @@
   border-left: solid $opaque-white 4px;
   background-color: $light-gray;
   right: 0;
+  bottom: 0;
   z-index: 1;
   width: max-content;
   padding-left: 5vw;
