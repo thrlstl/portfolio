@@ -14,8 +14,8 @@
     height: calc(100vh - 15vw - 57.6px);
     margin-top: 57.6px;
     // padding-top: 57.6px;
-    // margin-bottom: 15vw;
-    padding-bottom: 15vw;
+    margin-bottom: 15vw;
+    // padding-bottom: 15vw;
   }
   @media (min-width: 576px) {
     height: calc(100vh - 25vw);
