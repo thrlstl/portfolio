@@ -18,7 +18,7 @@ function Signature(props) {
 function BackgroundImages(props) {
     return(
         <div className='background-images-container'>
-            {/* <img className='background-image' src={props.backgroundImage} alt='self-portrait'/> */}
+            <img className='background-image' src={props.backgroundImage} alt='self-portrait'/>
             <img className='background-shadow' src={props.backgroundShadow} alt='self-portrait-shadow' />
         </div>
     )
