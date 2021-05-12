@@ -5,27 +5,27 @@
 
 .page-container {
   position: fixed;
-  margin-top: 10vw;
-  margin-bottom: 15vw;
+  top: 10vw;
+  bottom: 15vw;
   height: calc(100vh - 25vw);
   width: 100vw;
   overflow: scroll;
   @media (max-width: 576px) {
     height: calc(100vh - 15vw - 57.6px);
-    margin-top: 57.6px;
+    top: 57.6px;
     // padding-top: 57.6px;
-    margin-bottom: 15vw;
+    bottom: 15vw;
     // padding-bottom: 15vw;
   }
   @media (min-width: 576px) {
     height: calc(100vh - 25vw);
-    margin-top: 10vw;
-    margin-bottom: 15vw;
+    top: 10vw;
+    bottom: 15vw;
   }
   @media (min-width: 768px) {
     height: calc(100vh - 152px);
-    margin-top: 76px;
-    margin-bottom: 76px;
+    top: 76px;
+    bottom: 76px;
   }
   &.about {
     display: flex;
