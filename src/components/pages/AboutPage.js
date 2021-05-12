@@ -64,27 +64,40 @@ function Bio(props) {
 }
 
 function QuickFacts() {
+
+    const favorites = [
+        'favorites', 
+        'iced americano', 
+        'mariah carey', 
+        'blue', 
+        'sichuan', 
+        'photoshop' ]
+
+    const hobbies = [
+        'hobbies', 
+        'music production', 
+        'biking', 
+        'cooking', 
+        'traveling', 
+        'reading' ]
+
+    const renderFavorites = () => {
+        return favorites.map(favorite => <p>{favorite}</p>)
+    }
+
+    const renderHobbies = () => {
+        return hobbies.map(hobby => <p>{hobby}</p>)
+    }
+
     return(
         <div className='quick-facts-container'>
-            {/* <div className='location-container'>
-                <p className='location'>Current City — Chicago, IL</p>
-            </div> */}
             <div className='quick-facts-content'>
+                <p className='location'>Current City — <span className='city'>Chicago, IL</span></p>
                 <div className='favorites'>
-                    <p>favorites</p>
-                    <p>iced americano</p>
-                    <p>mariah carey</p>
-                    <p>blue</p>
-                    <p>sichuan</p>
-                    <p>photoshop</p>
+                    {renderFavorites()}
                 </div>
                 <div className='hobbies'>
-                    <p>hobbies</p>
-                    <p>music production</p>
-                    <p>biking</p>
-                    <p>cooking</p>
-                    <p>traveling</p>
-                    <p>reading</p>
+                    {renderHobbies()}
                 </div>
             </div>
         </div>
@@ -115,10 +128,10 @@ function AboutPage() {
     return(
         <>
             <Bio signature={images.signature} />
-            <QuickFacts />
             <BackgroundImages 
             backgroundImage={images.backgroundImage}
             backgroundShadow={images.backgroundShadow} />
+            <QuickFacts />
         </>
     )
 }
