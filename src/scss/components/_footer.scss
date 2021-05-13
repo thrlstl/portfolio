@@ -51,27 +51,39 @@
   position: relative;
   z-index: 3;
   margin-left: 2%;
-  height: 60%;
-  width: auto;
+  height: 2vw;
+  width: 2vw;
+  box-shadow: $dark-mode-shadow;
+  border-style: solid;
+  border-color: $opaque-white;
+  border-width: 2px;
+  border-radius: 20px;
 }
 
-.light-dark-button {
-  opacity: 0.6;
-  position: relative;
+.dark {
+  border-radius: 20px;
+  width: 100%;
   height: 100%;
-  width: auto;
-  @media (min-width: 576px) {
-    &:hover {
-      opacity: 0.2;
-    }
-  }
-  &:hover {
-    opacity: 0.2;
-  }
-  &.clicked {
-    animation: pulsate-bck 0.5s ease-in-out both;
-  }
+  background-color: $dark-gray;
 }
+
+// .light-dark-button {
+//   opacity: 0.6;
+//   position: relative;
+//   height: 100%;
+//   width: auto;
+//   @media (min-width: 576px) {
+//     &:hover {
+//       opacity: 0.2;
+//     }
+//   }
+//   &:hover {
+//     opacity: 0.2;
+//   }
+//   &.clicked {
+//     animation: pulsate-bck 0.5s ease-in-out both;
+//   }
+// }
 
 .mobile-menu {
   &.enter {

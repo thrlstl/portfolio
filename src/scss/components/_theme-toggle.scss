@@ -1,0 +1,40 @@
+.theme-toggle-container {
+  z-index: 3;
+  margin-left: 2vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6.5vw;
+  height: 6.5vw;
+  border-radius: 50%;
+  opacity: 0.5;
+  box-shadow: $icon-shadow;
+  &[theme="dark"] {
+    opacity: 0.5;
+    background: $toggle-gradient;
+    &:hover {
+      opacity: 0.2;
+    }
+  }
+  &[theme="light"] {
+    opacity: 1;
+    background: white;
+    &:hover {
+      opacity: 0.5;
+    }
+  }
+  @media (min-width: 768px) {
+    width: 34.56px;
+    height: 34.56px;
+  }
+  &[type="mobile"] {
+    margin-left: 0;
+    margin-right: 2vw;
+  }
+}
+
+.theme-toggle-icon {
+  position: relative;
+  width: 50%;
+  height: auto;
+}

@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react'
 import MenuButton from './MenuButton'
-import LightDarkButton from './LightDarkButton'
+import ThemeToggle from './ThemeToggle'
 import ProfilePhoto from './ProfilePhoto'
 import isTabletOrMobileContext from '../../contexts/isTabletOrMobileContext'
 import ThemeContext from '../../contexts/ThemeContext'
@@ -41,7 +41,8 @@ function Footer() {
     return(
         <div className='footer' theme={theme}>
             { !isTabletOrMobile
-            ?  <LightDarkButton /> : <MenuButton toggleMenu={toggleMenu} /> }
+            ?  <ThemeToggle /> 
+            :  <MenuButton toggleMenu={toggleMenu} /> }
                 <FooterMenu 
                 menuType={menuType} 
                 animationType={animationType}
