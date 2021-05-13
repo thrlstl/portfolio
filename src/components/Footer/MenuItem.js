@@ -8,7 +8,7 @@ function MenuItem(props) {
     const name = props.name
     const itemRoute = props.route
     const currentRoute = location.pathname
-    const theme = useContext(ThemeContext)
+    const { theme } = useContext(ThemeContext)
     const [animationClass, setAnimationClass] = useState('')
 
     useEffect(() => {

@@ -7,7 +7,7 @@ function LinkIcon(props) {
     const darkIcon = props.dark
     const name = props.name
     const link = props.link
-    const theme = useContext(ThemeContext)
+    const { theme } = useContext(ThemeContext)
     const [image, setImage] = useState(darkIcon)
 
     useEffect(() => {

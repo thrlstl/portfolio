@@ -47,6 +47,32 @@
   }
 }
 
+.light-dark-container {
+  position: relative;
+  z-index: 3;
+  margin-left: 2%;
+  height: 60%;
+  width: auto;
+}
+
+.light-dark-button {
+  opacity: 0.6;
+  position: relative;
+  height: 100%;
+  width: auto;
+  @media (min-width: 576px) {
+    &:hover {
+      opacity: 0.2;
+    }
+  }
+  &:hover {
+    opacity: 0.2;
+  }
+  &.clicked {
+    animation: pulsate-bck 0.5s ease-in-out both;
+  }
+}
+
 .mobile-menu {
   &.enter {
     animation: slide-in-bottom 0.5s both;

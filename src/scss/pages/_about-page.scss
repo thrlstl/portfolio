@@ -11,6 +11,9 @@
     animation: $fade-in;
     -webkit-animation: $fade-in;
   }
+  &.bio-container[theme="light"] {
+    color: black;
+  }
 }
 
 .signature-container {
@@ -90,6 +93,20 @@
     background: none;
     height: min-content;
   }
+  &[theme="light"] {
+    color: black;
+    background-color: $opaque-white;
+    border-color: $pastel-blue;
+    .location {
+      border-color: black;
+    }
+  }
+}
+
+.quick-facts-container[theme="light"] {
+  &.favorites :first-child {
+    color: $pastel-blue;
+  }
 }
 
 .quick-facts-content {
@@ -102,7 +119,7 @@
     line-height: 17px;
     margin: 0;
     &.location {
-      padding: 5px;
+      padding: 10px;
       margin-bottom: 2vw;
       border: solid 1px white;
       font-weight: 500;

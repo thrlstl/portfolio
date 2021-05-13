@@ -4,7 +4,7 @@ import myPhoto from '../../assets/images/profile-photo.jpg'
 
 function ProfilePhoto() {
 
-    const theme = useContext(ThemeContext)
+    const { theme } = useContext(ThemeContext)
 
     return(
         <img 

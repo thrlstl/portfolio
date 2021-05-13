@@ -3,9 +3,9 @@ import ThemeContext from '../../contexts/ThemeContext'
 import IconDark from '../../assets/images/menu-icon-dark.png'
 import IconLight from '../../assets/images/menu-icon-light.png'
 
-function MenuButton(props) {
+function LightDarkButton(props) {
 
-    const { theme } = useContext(ThemeContext)
+    const { theme, setTheme } = useContext(ThemeContext)
     const [iconType, setIconType] = useState(null)
     const [clicked, setClicked] = useState(false)
     const [animationClass, setAnimationClass] = useState('')
@@ -27,16 +27,19 @@ function MenuButton(props) {
     }, [clicked])
 
     const handleClick = () => {
-        setClicked(!clicked)
-        props.toggleMenu()
+        setTheme(() => {
+            return theme === 'light'
+            ? 'dark'
+            : 'light'
+        })
     }
 
     return(
         <div 
-        className='menu-button-container'>
+        className='light-dark-container'>
             <img 
             onClick={handleClick}
-            className={`menu-button ${animationClass}`}
+            className={`light-dark-button ${animationClass}`}
             onAnimationEnd={() => setClicked(!clicked)}
             src={iconType}
             alt='menu-icon'></img>
@@ -44,4 +47,4 @@ function MenuButton(props) {
     )
 }
 
-export default MenuButton;
+export default LightDarkButton;

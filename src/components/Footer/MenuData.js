@@ -12,8 +12,8 @@ const MenuData = [
         route: '/resume'
     },
     {
-        name: 'Contact',
-        route: '/contact'
+        name: 'Blog',
+        route: '/blog'
     },
 ]
 
