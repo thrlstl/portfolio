@@ -1,7 +1,6 @@
 @import "./projects-page";
 @import "./about-page";
 @import "./resume-page";
-@import "./contact-page";
 
 .page-container {
   position: fixed;
@@ -13,9 +12,7 @@
   @media (max-width: 576px) {
     height: calc(100vh - 15vw - 57.6px);
     top: 57.6px;
-    // padding-top: 57.6px;
     bottom: 15vw;
-    // padding-bottom: 15vw;
   }
   @media (min-width: 576px) {
     height: calc(100vh - 25vw);
@@ -30,6 +27,14 @@
   &.about {
     display: flex;
     align-items: center;
+    @media (max-width: 768px) {
+      display: block;
+    }
+  }
+  &.projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @media (max-width: 768px) {
       display: block;
     }

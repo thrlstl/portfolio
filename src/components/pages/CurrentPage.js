@@ -2,7 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import AboutPage from './AboutPage'
 import BlogPage from './BlogPage'
-import ProjectsPage from './ProjectsPage'
+import ProjectsPage from './projects-page/ProjectsPage'
 import ResumePage from './ResumePage'
 
 function CurrentPage() {

@@ -2,7 +2,9 @@ import React from 'react'
 
 function ProjectsPage() {
     return(
-        <h1>Projects (in progress)</h1>
+        <div>
+            <h1>Projects</h1>
+        </div>
     )
 }
 
