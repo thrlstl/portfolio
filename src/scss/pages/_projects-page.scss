@@ -1,0 +1,31 @@
+.projects-feed-container {
+  width: min-content;
+  height: 100%;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  grid-template-rows: auto;
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+}
+
+.project-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 5vw;
+  padding-top: 5vw;
+  &:nth-last-child(-n + 2) {
+    padding-bottom: 5vw;
+  }
+}
+
+.project-card {
+  background-color: $highlight-gray;
+  border: solid 5px black;
+  width: 40vw;
+  max-width: 620px;
+  height: calc(40vw * 0.56);
+  max-height: 347px;
+}
