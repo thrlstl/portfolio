@@ -1,7 +1,13 @@
+$project-feed-spacing: 5vw;
+$project-card-alignment: 2vw;
+$project-card-border: 2px;
+$project-card-width: 40vw;
+
 .projects-feed-container {
   width: min-content;
   height: 100%;
   display: grid;
+  margin-left: $project-feed-spacing;
   grid-template-columns: min-content min-content;
   grid-template-rows: auto;
   @media (max-width: 768px) {
@@ -12,20 +18,61 @@
 
 .project-card-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding-left: 5vw;
-  padding-top: 5vw;
+  padding-top: calc(#{$project-feed-spacing} + #{$project-card-alignment});
   &:nth-last-child(-n + 2) {
-    padding-bottom: 5vw;
+    padding-bottom: $project-feed-spacing;
+  }
+  &:nth-child(even) {
+    padding-right: $project-card-alignment;
+    padding-left: $project-feed-spacing;
+  }
+  &:nth-child(odd) {
+    padding-right: $project-card-alignment;
+  }
+  &[theme="light"] {
+    .project-card {
+      background-color: white;
+    }
+    .project-card-shadow-1 {
+      box-shadow: $light-mode-shadow;
+    }
   }
 }
 
-.project-card {
-  background-color: $highlight-gray;
-  border: solid 5px black;
-  width: 40vw;
+.project-card-header {
+  position: absolute;
+  z-index: 3;
+  margin-left: $project-card-alignment;
+  margin-top: calc(-#{$project-card-alignment} - #{$project-card-border});
+  background-color: $pastel-red;
+  border: solid $project-card-border black;
+  width: $project-card-width;
   max-width: 620px;
-  height: calc(40vw * 0.56);
+  height: $project-card-alignment;
+  max-height: 347px;
+}
+
+.project-card {
+  position: relative;
+  z-index: 2;
+  left: $project-card-alignment;
+  bottom: $project-card-alignment;
+  background-color: $highlight-gray;
+  border: solid $project-card-border black;
+  width: $project-card-width;
+  max-width: 620px;
+  height: calc(#{$project-card-width} * 0.56);
+  max-height: 347px;
+}
+
+.project-card-shadow-1 {
+  position: absolute;
+  z-index: 1;
+  background-color: $pastel-blue;
+  box-shadow: $dark-mode-shadow;
+  border: solid $project-card-border black;
+  width: $project-card-width;
+  max-width: 620px;
+  height: calc(#{$project-card-width} * 0.56);
   max-height: 347px;
 }
