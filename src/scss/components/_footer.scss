@@ -7,8 +7,14 @@
   width: 100vw;
   height: 15vw;
   bottom: 0;
+  box-shadow: $dark-mode-shadow;
+  -webkit-box-shadow: $dark-mode-shadow;
+  -moz-box-shadow: $dark-mode-shadow;
   &[theme="light"] {
     background-color: white;
+    box-shadow: $light-mode-shadow;
+    -webkit-box-shadow: $light-mode-shadow;
+    -moz-box-shadow: $light-mode-shadow;
   }
   @media (min-width: 768px) {
     background-color: $dark-gray;
@@ -66,24 +72,6 @@
   height: 100%;
   background-color: $dark-gray;
 }
-
-// .light-dark-button {
-//   opacity: 0.6;
-//   position: relative;
-//   height: 100%;
-//   width: auto;
-//   @media (min-width: 576px) {
-//     &:hover {
-//       opacity: 0.2;
-//     }
-//   }
-//   &:hover {
-//     opacity: 0.2;
-//   }
-//   &.clicked {
-//     animation: pulsate-bck 0.5s ease-in-out both;
-//   }
-// }
 
 .mobile-menu {
   &.enter {
