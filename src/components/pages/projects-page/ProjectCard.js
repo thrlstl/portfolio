@@ -3,7 +3,7 @@ import ThemeContext from '../../../contexts/ThemeContext'
 
 function ProjectCard(props) {
 
-    const name = props.name
+    // const name = props.name
     const { theme } = useContext(ThemeContext)
 
     return(
