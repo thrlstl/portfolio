@@ -130,7 +130,7 @@ $card-width-mobile: 80vw;
   }
 }
 
-.project-info-container {
+.right-info-container {
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -232,5 +232,117 @@ $card-width-mobile: 80vw;
   @media (max-width: 768px) {
     margin-top: 1px;
     min-width: 50%;
+  }
+}
+
+.more-info-modal {
+  position: absolute;
+  z-index: 3;
+  background-color: $highlight-gray;
+  border: solid $card-border $light-gray;
+  width: $card-width;
+  max-width: 620px;
+  height: calc(#{$card-width} * 0.56);
+  max-height: 347px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 768px) {
+    width: $card-width-mobile;
+    height: $card-width-mobile;
+    max-height: none;
+  }
+}
+
+.close-button {
+  position: absolute;
+  top: calc(#{$card-alignment * 2});
+  right: $card-alignment;
+  margin: 0;
+  width: max-content;
+  font-size: 13px;
+  font-weight: 500;
+  color: $light-gray;
+  border: thin solid $opaque-white;
+  border-radius: 15px;
+  padding: 5px 8px;
+  background-color: $opaque-white-light;
+  @media (max-width: 768px) {
+    right: $card-alignment-mobile;
+    top: calc(#{$card-alignment-mobile} * 2);
+  }
+  @media (max-width: 651px) {
+    font-size: 1.9vw;
+  }
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+  }
+}
+
+.tags-container {
+  position: absolute;
+  width: calc(100% - #{$card-alignment * 2});
+  display: flex;
+  flex-wrap: wrap;
+  overflow: scroll;
+  max-height: 45%;
+  justify-content: space-between;
+  padding-bottom: $card-alignment;
+  bottom: 0;
+  @media (max-width: 768px) {
+    width: calc(100% - #{$card-alignment-mobile * 2});
+    padding-bottom: $card-alignment-mobile;
+  }
+}
+
+.tag-item {
+  margin: 3px 3px;
+  width: max-content;
+  font-size: 10px;
+  font-weight: 700;
+  color: $opaque-white;
+  background-color: $opaque-white-light;
+  border-radius: 15px;
+  padding: 5px 8px;
+  @media (max-width: 768px) {
+    font-size: 8px;
+  }
+  &[type="title"] {
+    background-color: $opaque-white-light;
+  }
+  &[type="React Native"],
+  &[type="React Native Swipeable"],
+  &[type="React"],
+  &[type="React Navigation"],
+  &[type="React Native Double Tap"],
+  &[type="React Native Grid List"],
+  &[type="React Native Debugger"] {
+    background-color: $pastel-blue;
+  }
+  &[type="Ruby on Rails"],
+  &[type="bcrypt"],
+  &[type="Active Model Serializers"],
+  &[type="Active Storage"] {
+    background-color: $pastel-red;
+  }
+  &[type="Javascript"] {
+    color: $opaque-light-gray;
+    background-color: #f0db4f;
+  }
+  &[type="Heroku"] {
+    background-color: #400099;
+  }
+  &[type="Expo"],
+  &[type="Expo Images Picker"] {
+    background-color: black;
+  }
+  &[type="React-Redux"] {
+    background-color: #7f42c3;
+  }
+  &[type="PostgreSQL"],
+  &[type="BuilderX"],
+  &[type="Adobe Photoshop (Wireframes)"] {
+    background-color: #316192;
   }
 }

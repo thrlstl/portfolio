@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import ThemeContext from '../../../contexts/ThemeContext'
 
 function CardContainer(props) {
@@ -32,9 +32,9 @@ function ContentContainer(props) {
     )
 }
 
-function ProjectInfoContainer(props) {
+function RightInfoContainer(props) {
     return(
-        <div className='project-info-container'>
+        <div className='right-info-container'>
             {props.children}
         </div>
     )
@@ -100,19 +100,84 @@ function ProjectLinks(props) {
     )
 }
 
-function MoreInfoButton() {
+function MoreInfoButton(props) {
+
+    const handleClick = () => {
+        props.setIsModalVisible()
+    }
+
     return(
-        <p className='more-info-button'>More Info</p>
+        <p 
+        className='more-info-button'
+        onClick={handleClick}>More Info</p>
+    )
+}
+
+function MoreInfoModal(props) {
+    return(
+        <div className='more-info-modal'>
+            {props.children}
+        </div>
+    )
+}
+
+function CloseButton(props) {
+
+    const handleClick = () => {
+        props.setIsModalVisible()
+    }
+
+    return(
+        <p 
+        className='close-button'
+        onClick={handleClick}>Close</p>
+    )
+}
+
+function ProjectTags(props) {
+    return(
+        <div className='tags-container'>
+            {props.children}
+        </div>
+    )
+} 
+
+function TagItem(props) {
+
+    const tags = props.tags
+
+    return(
+        <>
+        <p 
+        className='tag-item'
+        type='title'>tags</p>
+        {tags.map(item => 
+        <p 
+        className='tag-item'
+        type={item.type}>
+        {item.type}
+        </p> )}
+        </>
     )
 }
 
 function Content(props) {
+
+    const [isModalVisible, setIsModalVisible] = useState(false)
+
     return(
         <ContentContainer>
-            <ProjectInfoContainer>
+            <RightInfoContainer>
                 <ProjectType type={props.type} />
-                <MoreInfoButton />
-            </ProjectInfoContainer>
+                <MoreInfoButton setIsModalVisible={() => setIsModalVisible(!isModalVisible)} />
+            </RightInfoContainer>
+                { isModalVisible ? 
+                <MoreInfoModal>
+                    <CloseButton setIsModalVisible={() => setIsModalVisible(!isModalVisible)} />
+                        <ProjectTags>
+                            <TagItem tags={props.tags} />
+                        </ProjectTags>
+                </MoreInfoModal> : null }
             <ProjectName name={props.name} />
             <ProjectStack stack={props.stack} />
             <ProjectLinks links={props.links}/>

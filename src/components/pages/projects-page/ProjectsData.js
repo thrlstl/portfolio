@@ -6,9 +6,28 @@ const projectsData = [
         description: 'Stage your photos for social media posts with friends or colleagues in collaborative collections with uploads & like/dislike functionality.',
         stack: [
             {type: 'React Native'},
-            {type: 'Ruby on Rails'}
+            {type: 'Ruby on Rails'},
         ],
-        tags: [],
+        tags: [
+            {type: 'BuilderX'},
+            {type: 'React Native Debugger'},
+            {type: 'React Navigation'},
+            {type: 'Heroku'},
+            {type: 'Adobe Photoshop (Wireframes)'},
+            {type: 'React-Redux'},
+            {type: 'Expo'},
+            {type: 'Expo Images Picker'},
+            {type: 'React Native Grid List'},
+            {type: 'React Native Double Tap'},
+            {type: 'React Native Swipeable'},
+            {type: 'Active Storage'},
+            {type: 'Active Model Serializers'},
+            {type: 'bcrypt'},
+            {type: 'PostgreSQL'},
+            {type: 'Javascript'},
+            {type: 'React Native'},
+            {type: 'Ruby on Rails'},
+        ],
         links: [
             {
                 type: 'Front-End',
@@ -34,7 +53,7 @@ const projectsData = [
         logo: '',
         description: 'Search by title to find and nominate up to five of your favorite movies in this animated mock awards show single-page app.',
         stack: [{type: 'React'}],
-        tags: '',
+        tags: [{type: 'React'}],
         links: [
             {
                 type: 'Live Site',
@@ -56,7 +75,7 @@ const projectsData = [
         logo: '',
         description: 'Learn how to implement CSS animations using React Hooks with this educational web application and coinciding technical blog.',
         stack: [{type: 'React'}],
-        tags: '',
+        tags: [{type: 'React'}],
         links: [
             {
                 type: 'Live Site',
@@ -82,7 +101,7 @@ const projectsData = [
         logo: '',
         description: 'Personal portfolio designed and built from scratch.',
         stack: [{type: 'React'}],
-        tags: [],
+        tags: [{type: 'React'}],
         links: [
             {
                 type: 'Github',
@@ -111,8 +130,12 @@ const projectsData = [
         description: 'Productivity web application for creating and tracking personal notes.',
         stack: [
             {type: 'React'}, 
-            {type: 'Ruby on Rails'}],
-        tags: '',
+            {type: 'Ruby on Rails'}
+        ],
+        tags: [
+            {type: 'React'}, 
+            {type: 'Ruby on Rails'},
+        ],
         links: [
             {
                 type: 'Front-End',
@@ -135,8 +158,12 @@ const projectsData = [
         description: 'Educational card-game style web application for learning English-to-Spanish word translations.',
         stack: [
             {type: 'Javascript'}, 
-            {type: 'Ruby on Rails'}],
-        tags: '',
+            {type: 'Ruby on Rails'}
+        ],
+        tags: [
+            {type: 'Javascript'}, 
+            {type: 'Ruby on Rails'}
+        ],
         links: [
             {
                 type: 'Github',
