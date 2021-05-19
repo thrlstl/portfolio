@@ -4,7 +4,10 @@ const projectsData = [
         type: 'Full-Stack Mobile App',
         logo: '',
         description: 'Stage your photos for social media posts with friends or colleagues in collaborative collections with uploads & like/dislike functionality.',
-        stack: ['React Native', 'Ruby on Rails'],
+        stack: [
+            {type: 'React Native'},
+            {type: 'Ruby on Rails'}
+        ],
         tags: [],
         links: [
             {
@@ -30,7 +33,7 @@ const projectsData = [
         type: 'Web App',
         logo: '',
         description: 'Search by title to find and nominate up to five of your favorite movies in this animated mock awards show single-page app.',
-        stack: ['React'],
+        stack: [{type: 'React'}],
         tags: '',
         links: [
             {
@@ -52,7 +55,7 @@ const projectsData = [
         type: 'Web App',
         logo: '',
         description: 'Learn how to implement CSS animations using React Hooks with this educational web application and coinciding technical blog.',
-        stack: ['React'],
+        stack: [{type: 'React'}],
         tags: '',
         links: [
             {
@@ -74,11 +77,11 @@ const projectsData = [
         ]
     },
     {
-        name: 'matthewcodes.io',
+        name: 'Portfolio',
         type: 'Responsive Web App',
         logo: '',
         description: 'Personal portfolio designed and built from scratch.',
-        stack: ['React'],
+        stack: [{type: 'React'}],
         tags: [],
         links: [
             {
@@ -106,7 +109,9 @@ const projectsData = [
         type: 'Full-Stack Web App',
         logo: '',
         description: 'Productivity web application for creating and tracking personal notes.',
-        stack: ['React', 'Ruby on Rails'],
+        stack: [
+            {type: 'React'}, 
+            {type: 'Ruby on Rails'}],
         tags: '',
         links: [
             {
@@ -128,7 +133,9 @@ const projectsData = [
         type: 'Web App',
         logo: '',
         description: 'Educational card-game style web application for learning English-to-Spanish word translations.',
-        stack: ['Javascript', 'Ruby on Rails'],
+        stack: [
+            {type: 'Javascript'}, 
+            {type: 'Ruby on Rails'}],
         tags: '',
         links: [
             {

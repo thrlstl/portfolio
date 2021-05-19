@@ -34,7 +34,7 @@ $card-width-mobile: 80vw;
     padding-right: $card-alignment;
   }
   &[theme="light"] {
-    .project-card {
+    .card-contents-container {
       background-color: white;
     }
     .card-shadow {
@@ -78,26 +78,6 @@ $card-width-mobile: 80vw;
   }
 }
 
-.card-contents-container {
-  position: relative;
-  z-index: 2;
-  left: $card-alignment;
-  bottom: $card-alignment;
-  background-color: $highlight-gray;
-  border: solid $card-border $light-gray;
-  width: $card-width;
-  max-width: 620px;
-  height: calc(#{$card-width} * 0.56);
-  max-height: 347px;
-  @media (max-width: 768px) {
-    width: $card-width-mobile;
-    height: $card-width-mobile;
-    left: $card-alignment-mobile;
-    bottom: $card-alignment-mobile;
-    max-height: none;
-  }
-}
-
 .card-shadow {
   position: absolute;
   z-index: 1;
@@ -112,5 +92,81 @@ $card-width-mobile: 80vw;
     width: $card-width-mobile;
     height: $card-width-mobile;
     max-height: none;
+  }
+}
+
+.card-contents-container {
+  position: relative;
+  z-index: 2;
+  left: $card-alignment;
+  bottom: $card-alignment;
+  background-color: $highlight-gray;
+  border: solid $card-border $light-gray;
+  width: $card-width;
+  max-width: 620px;
+  height: calc(#{$card-width} * 0.56);
+  max-height: 347px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  @media (max-width: 768px) {
+    width: $card-width-mobile;
+    height: $card-width-mobile;
+    left: $card-alignment-mobile;
+    bottom: $card-alignment-mobile;
+    max-height: none;
+  }
+}
+
+.project-name {
+  font-style: italic;
+  font-size: 2vw;
+  color: $dark-gray;
+  @media (max-width: 768px) {
+    text-align: center;
+    width: 75%;
+    height: min-content;
+    font-size: 8vw;
+  }
+}
+
+.project-type {
+  position: absolute;
+  font-size: 13px;
+  font-weight: 700;
+  margin-top: 0;
+  color: $highlight-gray;
+  border-radius: 15px;
+  padding: 5px 8px;
+  background-color: $dark-gray;
+  right: $card-alignment;
+  top: calc(#{$card-alignment} * 2);
+}
+
+.project-stack-container {
+  position: absolute;
+  left: $card-alignment;
+  top: calc(#{$card-alignment} * 2);
+}
+
+.stack-item {
+  margin: 0;
+  margin-bottom: 5px;
+  width: max-content;
+  font-size: 13px;
+  font-weight: 700;
+  color: $opaque-white;
+  border-radius: 15px;
+  padding: 5px 8px;
+  &[type="React Native"],
+  &[type="React"] {
+    background-color: $pastel-blue;
+  }
+  &[type="Ruby on Rails"] {
+    background-color: $pastel-red;
+  }
+  &[type="Javascript"] {
+    color: $opaque-light-gray;
+    background-color: #f0db4f;
   }
 }
