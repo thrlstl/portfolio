@@ -32,6 +32,14 @@ function ContentContainer(props) {
     )
 }
 
+function ProjectInfoContainer(props) {
+    return(
+        <div className='project-info-container'>
+            {props.children}
+        </div>
+    )
+}
+
 function ProjectType(props) {
     return(
         <p className='project-type'>{props.type}</p>
@@ -92,10 +100,19 @@ function ProjectLinks(props) {
     )
 }
 
+function MoreInfoButton() {
+    return(
+        <p className='more-info-button'>More Info</p>
+    )
+}
+
 function Content(props) {
     return(
         <ContentContainer>
-            <ProjectType type={props.type} />
+            <ProjectInfoContainer>
+                <ProjectType type={props.type} />
+                <MoreInfoButton />
+            </ProjectInfoContainer>
             <ProjectName name={props.name} />
             <ProjectStack stack={props.stack} />
             <ProjectLinks links={props.links}/>

@@ -130,23 +130,49 @@ $card-width-mobile: 80vw;
   }
 }
 
-.project-type {
+.project-info-container {
   position: absolute;
-  font-size: 13px;
-  font-weight: 700;
-  margin-top: 0;
-  color: $highlight-gray;
-  border-radius: 15px;
-  padding: 5px 8px;
-  background-color: $dark-gray;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   right: $card-alignment;
   top: calc(#{$card-alignment} * 2);
   @media (max-width: 768px) {
     right: $card-alignment-mobile;
     top: calc(#{$card-alignment-mobile} * 2);
   }
+}
+
+.project-type {
+  margin: 0;
+  margin-bottom: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  color: $highlight-gray;
+  border-radius: 15px;
+  padding: 5px 8px;
+  background-color: $dark-gray;
   @media (max-width: 651px) {
     font-size: 1.9vw;
+  }
+}
+
+.more-info-button {
+  margin: 0;
+  width: max-content;
+  font-size: 13px;
+  font-weight: 500;
+  color: $light-gray;
+  border: thin solid $opaque-white;
+  border-radius: 15px;
+  padding: 5px 8px;
+  background-color: $opaque-white-light;
+  @media (max-width: 651px) {
+    font-size: 1.9vw;
+  }
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.03);
   }
 }
 
