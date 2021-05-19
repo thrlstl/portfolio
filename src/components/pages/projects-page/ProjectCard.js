@@ -57,12 +57,37 @@ function ProjectStack(props) {
     const stack = props.stack
 
     const renderStackItems = () => {
-        return stack.map(item => <StackItem {...item}/>)
+        return stack.map(item => <StackItem key={item.type} {...item}/>)
     }
 
     return(
         <div className='project-stack-container'>
             {renderStackItems()}
+        </div>
+    )
+}
+
+function LinkItem(props) {
+    return(
+        <a
+        className='link-item' 
+        href={props.URL}
+        target="_blank"
+        rel="noreferrer">{props.type}</a>
+    )
+}
+
+function ProjectLinks(props) {
+
+    const links = props.links
+
+    const renderLinkItems = () => {
+        return links.map(item => <LinkItem key={item.type} {...item} />)
+    }
+
+    return(
+        <div className='project-links-container'>
+            {renderLinkItems()}
         </div>
     )
 }
@@ -73,6 +98,7 @@ function Content(props) {
             <ProjectType type={props.type} />
             <ProjectName name={props.name} />
             <ProjectStack stack={props.stack} />
+            <ProjectLinks links={props.links}/>
         </ContentContainer>
     )
 }

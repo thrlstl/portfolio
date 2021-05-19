@@ -141,17 +141,28 @@ $card-width-mobile: 80vw;
   background-color: $dark-gray;
   right: $card-alignment;
   top: calc(#{$card-alignment} * 2);
+  @media (max-width: 768px) {
+    right: $card-alignment-mobile;
+    top: calc(#{$card-alignment-mobile} * 2);
+  }
+  @media (max-width: 651px) {
+    font-size: 1.9vw;
+  }
 }
 
 .project-stack-container {
   position: absolute;
   left: $card-alignment;
   top: calc(#{$card-alignment} * 2);
+  @media (max-width: 768px) {
+    left: $card-alignment-mobile;
+    top: calc(#{$card-alignment-mobile} * 2);
+  }
 }
 
 .stack-item {
   margin: 0;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   width: max-content;
   font-size: 13px;
   font-weight: 700;
@@ -168,5 +179,32 @@ $card-width-mobile: 80vw;
   &[type="Javascript"] {
     color: $opaque-light-gray;
     background-color: #f0db4f;
+  }
+}
+
+.project-links-container {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+
+.link-item {
+  flex-grow: 1;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  color: $highlight-gray;
+  background-color: $light-gray;
+  padding: 5px 0px;
+  &:hover {
+    color: white;
+  }
+  @media (max-width: 768px) {
+    margin-top: 1px;
+    min-width: 50%;
   }
 }
