@@ -155,17 +155,20 @@ function ProjectTags(props) {
 
 function TagItem(props) {
 
+    const { theme } = useContext(ThemeContext)
     const tags = props.tags
 
     return(
         <>
         <p 
         className='tag-item'
-        type='title'>tags</p>
+        type='title'
+        theme={theme}>tags</p>
         {tags.map(item => 
         <p 
         className='tag-item'
-        type={item.type}>
+        type={item.type}
+        theme={theme}>
         {item.type}
         </p> )}
         </>

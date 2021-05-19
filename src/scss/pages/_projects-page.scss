@@ -163,7 +163,6 @@ $card-width-mobile: 80vw;
   font-size: 13px;
   font-weight: 500;
   color: $light-gray;
-  border: thin solid $opaque-white;
   border-radius: 15px;
   padding: 5px 8px;
   background-color: $opaque-white-light;
@@ -175,7 +174,6 @@ $card-width-mobile: 80vw;
     transform: scale(1.03);
   }
   &[theme="light"] {
-    border: thin solid $lighter-gray;
     background-color: $opaque-lighter-gray;
   }
 }
@@ -270,7 +268,6 @@ $card-width-mobile: 80vw;
   font-size: 13px;
   font-weight: 500;
   color: $light-gray;
-  border: thin solid $opaque-white;
   border-radius: 15px;
   padding: 5px 8px;
   background-color: $opaque-white-light;
@@ -286,7 +283,6 @@ $card-width-mobile: 80vw;
     transform: scale(1.03);
   }
   &[theme="light"] {
-    border: thin solid $lighter-gray;
     background-color: $opaque-lighter-gray;
   }
 }
@@ -319,8 +315,8 @@ $card-width-mobile: 80vw;
   @media (max-width: 768px) {
     font-size: 8px;
   }
-  &[type="title"] {
-    background-color: $opaque-white-light;
+  &[theme="light"] {
+    background-color: $opaque-light-gray;
   }
   &[type="React Native"],
   &[type="React Native Swipeable"],
