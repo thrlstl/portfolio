@@ -287,6 +287,23 @@ $card-width-mobile: 80vw;
   }
 }
 
+.project-description {
+  margin: 0;
+  text-align: left;
+  font-style: italic;
+  font-size: 1.2vw;
+  color: $dark-gray;
+  position: absolute;
+  left: $card-alignment;
+  width: 75%;
+  top: calc(#{$card-alignment} * 2);
+  @media (max-width: 768px) {
+    top: calc(#{$card-alignment-mobile} * 2);
+    left: $card-alignment-mobile;
+    font-size: 4vw;
+  }
+}
+
 .tags-container {
   position: absolute;
   width: calc(100% - #{$card-alignment * 2});

@@ -175,6 +175,12 @@ function TagItem(props) {
     )
 }
 
+function ProjectDescription(props) {
+    return(
+        <p className='project-description'>{props.description}</p>
+    )
+}
+
 function Content(props) {
 
     const [isModalVisible, setIsModalVisible] = useState(false)
@@ -188,6 +194,7 @@ function Content(props) {
                 { isModalVisible ? 
                 <MoreInfoModal>
                     <CloseButton setIsModalVisible={() => setIsModalVisible(!isModalVisible)} />
+                            <ProjectDescription description={props.description}/>
                         <ProjectTags>
                             <TagItem tags={props.tags} />
                         </ProjectTags>
