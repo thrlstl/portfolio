@@ -102,6 +102,8 @@ function ProjectLinks(props) {
 
 function MoreInfoButton(props) {
 
+    const { theme } = useContext(ThemeContext)
+
     const handleClick = () => {
         props.setIsModalVisible()
     }
@@ -109,19 +111,27 @@ function MoreInfoButton(props) {
     return(
         <p 
         className='more-info-button'
+        theme={theme}
         onClick={handleClick}>More Info</p>
     )
 }
 
 function MoreInfoModal(props) {
+
+    const { theme } = useContext(ThemeContext)
+
     return(
-        <div className='more-info-modal'>
+        <div 
+        className='more-info-modal'
+        theme={theme}>
             {props.children}
         </div>
     )
 }
 
 function CloseButton(props) {
+
+    const { theme } = useContext(ThemeContext)
 
     const handleClick = () => {
         props.setIsModalVisible()
@@ -130,7 +140,8 @@ function CloseButton(props) {
     return(
         <p 
         className='close-button'
-        onClick={handleClick}>Close</p>
+        onClick={handleClick}
+        theme={theme}>Close</p>
     )
 }
 
