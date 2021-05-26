@@ -21,7 +21,7 @@ function BlogCardContents(props) {
 function BlogThumbnail(props) {
     return(
         <div className='thumbnail-container'>
-            <img className='thumbnail-image' src={props.thumbnail} />
+            <img className='thumbnail-image' src={props.thumbnail} alt={props.alt}/>
         </div>
     )
 }
@@ -57,7 +57,7 @@ function BlogCard(props) {
 
     return(
         <BlogCardContents>
-            <BlogThumbnail thumbnail={props.thumbnail}/>
+            <BlogThumbnail thumbnail={props.thumbnail} alt={props.title}/>
             <BlogTitle title={props.title} />
             <BlogDescription description={props.description}/>
             <ReadMoreLink link={props.link} />

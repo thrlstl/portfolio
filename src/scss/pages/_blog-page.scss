@@ -88,7 +88,6 @@ $card-width-mobile: 80vw;
   width: max-content;
   max-width: calc(100% - #{$card-alignment});
   color: $opaque-white;
-  //   font-weight: 600;
   @media (max-width: 768) {
     max-width: calc(100% - #{$card-alignment-mobile});
   }
