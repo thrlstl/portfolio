@@ -9,6 +9,8 @@ const projectsData = [
             {type: 'Ruby on Rails'},
         ],
         tags: [
+            {type: 'React Native'},
+            {type: 'Ruby on Rails'},
             {type: 'BuilderX'},
             {type: 'React Native Debugger'},
             {type: 'React Navigation'},
@@ -25,8 +27,6 @@ const projectsData = [
             {type: 'bcrypt'},
             {type: 'PostgreSQL'},
             {type: 'Javascript'},
-            {type: 'React Native'},
-            {type: 'Ruby on Rails'},
         ],
         links: [
             {
@@ -48,12 +48,34 @@ const projectsData = [
         ]
     },
     {
+        name: 'Portfolio',
+        type: 'Responsive Web App',
+        logo: '',
+        description: 'Personal portfolio designed and built from scratch.',
+        stack: [{type: 'React'}],
+        tags: [{type: 'React'}],
+        links: [
+            {
+                type: 'Github',
+                URL: 'https://github.com/thrlstl/portfolio'
+            }
+        ]
+    },
+    {
         name: 'Movie Nominations App',
         type: 'Web App',
         logo: '',
         description: 'Search by title to find and nominate up to five of your favorite movies in this animated mock awards show single-page app.',
         stack: [{type: 'React'}],
-        tags: [{type: 'React'}],
+        tags: [
+            {type: 'React'},
+            {type: 'Javascript'},
+            {type: 'Netlify'},
+            {type: 'React Hooks'},
+            {type: 'HTML5'},
+            {type: 'CSS3'},
+            {type: 'Third-Party APIs'},
+        ],
         links: [
             {
                 type: 'Live Site',
@@ -75,7 +97,15 @@ const projectsData = [
         logo: '',
         description: 'Learn how to implement CSS animations using React Hooks with this educational web application and coinciding technical blog.',
         stack: [{type: 'React'}],
-        tags: [{type: 'React'}],
+        tags: [
+            {type: 'React'},
+            {type: 'Javascript'},
+            {type: 'Netlify'},
+            {type: 'React Hooks'},
+            {type: 'HTML5'},
+            {type: 'CSS3'},
+            {type: 'Third-Party APIs'},
+        ],
         links: [
             {
                 type: 'Live Site',
@@ -92,20 +122,6 @@ const projectsData = [
             {
                 type: 'Blog Post',
                 URL: 'https://medium.com/swlh/css-animations-with-react-hooks-1d855dab4a3',
-            }
-        ]
-    },
-    {
-        name: 'Portfolio',
-        type: 'Responsive Web App',
-        logo: '',
-        description: 'Personal portfolio designed and built from scratch.',
-        stack: [{type: 'React'}],
-        tags: [{type: 'React'}],
-        links: [
-            {
-                type: 'Github',
-                URL: 'https://github.com/thrlstl/portfolio'
             }
         ]
     },

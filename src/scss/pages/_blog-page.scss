@@ -1,0 +1,113 @@
+$feed-spacing: 5vw;
+$feed-spacing-mobile: 10vw;
+$card-alignment: 0.5vw;
+$card-alignment-mobile: 2vw;
+$card-border: 2px;
+$card-width: 40vw;
+$card-width-mobile: 80vw;
+
+.blog-feed-container {
+  width: min-content;
+  height: 100%;
+  display: grid;
+  grid-template-columns: min-content min-content;
+  grid-template-rows: auto;
+  @media (max-width: 768px) {
+    grid-template-columns: min-content;
+    grid-template-rows: auto;
+  }
+}
+
+.blog-card-contents-container {
+  width: $card-width;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: $feed-spacing;
+  max-width: 620px;
+  &:nth-child(even) {
+    padding-left: $feed-spacing;
+  }
+  &:nth-last-child(-n + 1) {
+    padding-bottom: $feed-spacing;
+  }
+  @media (max-width: 768px) {
+    width: $card-width-mobile;
+    padding-top: $feed-spacing-mobile;
+    &:nth-last-child(-n + 1) {
+      padding-bottom: 0px;
+    }
+    &:nth-child(even) {
+      padding-left: 0px;
+    }
+    &:last-child {
+      padding-bottom: $feed-spacing-mobile;
+    }
+  }
+}
+
+.blog-title {
+  color: $dark-gray;
+  font-style: italic;
+  font-weight: 800;
+  padding: $card-alignment;
+  height: min-content;
+  width: max-content;
+  max-width: calc(100% - #{$card-alignment});
+  background-color: $pastel-blue;
+  @media (max-width: 768) {
+    max-width: calc(100% - #{$card-alignment-mobile});
+  }
+}
+
+.thumbnail-container {
+  background-color: $highlight-gray;
+  width: 100%;
+  height: calc(#{$card-width} / 2);
+  display: flex;
+  border-radius: 5px;
+  border: solid $pastel-red;
+  border-width: 0px 0px 15px 0px;
+  @media (max-width: 768px) {
+    height: calc(#{$card-width-mobile} / 2);
+  }
+}
+
+.thumbnail-image {
+  opacity: 0.75;
+  border-radius: 10px 10px 0px 0px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.blog-description {
+  margin-top: 0;
+  height: min-content;
+  width: max-content;
+  max-width: calc(100% - #{$card-alignment});
+  color: $opaque-white;
+  //   font-weight: 600;
+  @media (max-width: 768) {
+    max-width: calc(100% - #{$card-alignment-mobile});
+  }
+  &[theme="light"] {
+    color: $dark-gray;
+  }
+}
+
+.read-more-link {
+  font-size: 10px;
+  font-weight: 700;
+  padding: $card-alignment calc(#{$card-alignment * 2});
+  border-radius: 20px;
+  background-color: $opaque-white-light;
+  width: max-content;
+  color: $opaque-white;
+  text-decoration: none;
+  @media (max-width: 768px) {
+    font-size: 15px;
+    padding: $card-alignment-mobile calc(#{$card-alignment-mobile * 2});
+  }
+}

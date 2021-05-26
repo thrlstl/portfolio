@@ -338,6 +338,7 @@ $card-width-mobile: 80vw;
   &[type="React Native"],
   &[type="React Native Swipeable"],
   &[type="React"],
+  &[type="React Hooks"],
   &[type="React Navigation"],
   &[type="React Native Double Tap"],
   &[type="React Native Grid List"],
@@ -358,7 +359,8 @@ $card-width-mobile: 80vw;
     background-color: #400099;
   }
   &[type="Expo"],
-  &[type="Expo Images Picker"] {
+  &[type="Expo Images Picker"],
+  &[type="Netlify"] {
     background-color: black;
   }
   &[type="React-Redux"] {
@@ -368,5 +370,14 @@ $card-width-mobile: 80vw;
   &[type="BuilderX"],
   &[type="Adobe Photoshop (Wireframes)"] {
     background-color: #316192;
+  }
+  &[type="SCSS"] {
+    background-color: #cd669a;
+  }
+  &[type="HTML5"] {
+    background-color: #e44d26;
+  }
+  &[type="CSS3"] {
+    background-color: #264de4;
   }
 }

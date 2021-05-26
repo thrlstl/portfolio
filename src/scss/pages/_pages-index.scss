@@ -1,6 +1,7 @@
 @import "./projects-page";
 @import "./about-page";
 @import "./resume-page";
+@import "./blog-page";
 
 .page-container {
   position: fixed;
@@ -35,6 +36,14 @@
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    @media (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+  &.blog {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     @media (max-width: 768px) {
       justify-content: center;
     }
