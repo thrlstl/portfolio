@@ -25,8 +25,8 @@ function Footer() {
     
     useEffect(() => {
         const pageContainer = document.querySelector('.page-container')
-        pageContainer.addEventListener('scroll', () => setIsScrollingOrClicked(true), setTimeout(() => setIsScrollingOrClicked(false), 1000))
-        pageContainer.addEventListener('click', () => setIsScrollingOrClicked(true), setTimeout(() => setIsScrollingOrClicked(false), 1000))
+        pageContainer.addEventListener('scroll', () => setIsScrollingOrClicked(true), setTimeout(() => setIsScrollingOrClicked(false), 1))
+        pageContainer.addEventListener('click', () => setIsScrollingOrClicked(true), setTimeout(() => setIsScrollingOrClicked(false), 1))
     })
 
     useEffect(() => {
