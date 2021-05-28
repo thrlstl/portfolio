@@ -1,4 +1,5 @@
 import React, { useContext, useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 import MenuButton from './MenuButton'
 import ThemeToggle from './ThemeToggle'
 import ProfilePhoto from './ProfilePhoto'
@@ -11,7 +12,21 @@ function Footer() {
     const isTabletOrMobile = useContext(isTabletOrMobileContext)
     const { theme } = useContext(ThemeContext)
     const [ menuAnimationType, setMenuAnimationType ] = useState('none')
+    const [ isScrollingOrClicked, setIsScrollingOrClicked ] = useState(false)
     const [menuType, setMenuType] = useState(null)
+    const location = useLocation()
+
+    useEffect(() => {
+        const pageContainer = document.querySelector('.page-container')
+        pageContainer.addEventListener('scroll', () => setIsScrollingOrClicked(true), setTimeout(() => setIsScrollingOrClicked(false), 1000))
+        pageContainer.addEventListener('click', () => setIsScrollingOrClicked(true), setTimeout(() => setIsScrollingOrClicked(false), 1000))
+    })
+
+    useEffect(() => {
+        return isScrollingOrClicked && menuAnimationType === 'entering'
+        ? toggleMenu()
+        : null
+    }, [isScrollingOrClicked])
 
     useEffect(() => {
         return isTabletOrMobile
@@ -19,11 +34,17 @@ function Footer() {
         : setMenuType('desktop-menu')
     }, [isTabletOrMobile])
 
+    useEffect(() => {
+        return location.pathname !== '/'
+        ? toggleMenu()
+        : null
+    }, [location])
+
     const toggleMenu = () => {
         setMenuAnimationType(() => {
-            return menuAnimationType === 'enter'
-            ? 'exit'
-            : 'enter'
+            return menuAnimationType === 'entering'
+            ? 'exiting'
+            : 'entering'
         })
     }
 
@@ -32,7 +53,7 @@ function Footer() {
             { !isTabletOrMobile
             ?  <ThemeToggle /> 
             :  <MenuButton toggleMenu={toggleMenu} /> }
-                <FooterMenu 
+                <FooterMenu
                 menuType={menuType} 
                 animationType={menuAnimationType}
                 theme={theme} />

@@ -74,15 +74,6 @@
 }
 
 .mobile-menu {
-  &.enter {
-    animation: slide-in-bottom 0.5s both;
-  }
-  &.exit {
-    animation: slide-out-bottom 1.5s both;
-    &.icon-container {
-      visibility: hidden;
-    }
-  }
   position: absolute;
   transform: translateY(100%);
   display: grid;
@@ -109,6 +100,15 @@
   }
   &.mobile-menu[theme="light"] .menu-item-name {
     color: black;
+  }
+  &.entering {
+    animation: slide-in-bottom 0.5s both;
+  }
+  &.exiting {
+    animation: slide-out-bottom 1.5s both;
+    &.icon-container {
+      visibility: hidden;
+    }
   }
 }
 
