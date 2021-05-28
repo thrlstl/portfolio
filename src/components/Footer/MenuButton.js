@@ -2,6 +2,8 @@ import React, { useContext, useEffect, useState } from 'react'
 import ThemeContext from '../../contexts/ThemeContext'
 import IconDark from '../../assets/images/menu-icon-dark.png'
 import IconLight from '../../assets/images/menu-icon-light.png'
+import AnimationContext from '../../contexts/AnimationContext'
+// import MobileMenuAnimationContext from '../../contexts/AnimationContext'
 
 function MenuButton(props) {
 
@@ -9,6 +11,8 @@ function MenuButton(props) {
     const [iconType, setIconType] = useState(null)
     const [clicked, setClicked] = useState(false)
     const [animationClass, setAnimationClass] = useState('')
+    const { animation, setAnimation } = useContext(AnimationContext)
+    // const { mobileMenuAnimation, setMobileMenuAnimation } = useContext(MobileMenuAnimationContext)
 
     useEffect(() => {
         setIconType(() => {
@@ -28,6 +32,11 @@ function MenuButton(props) {
 
     const handleClick = () => {
         setClicked(!clicked)
+        // setAnimation(() => {
+        //     return animation === 'none'
+        //     ? 'enter'
+        //     : 'exit'
+        // })
         props.toggleMenu()
     }
 

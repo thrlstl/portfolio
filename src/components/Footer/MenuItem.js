@@ -25,7 +25,8 @@ function MenuItem(props) {
         className={`menu-item ${animationClass}`}
         theme={theme}>
             <span className={`menu-item-name ${animationClass}`}>
-                { name ? name : null }
+                {/* { name ? name : null } */}
+                {name}
             </span>
         </div>
     )

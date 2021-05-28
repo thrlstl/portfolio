@@ -10,15 +10,8 @@ function Footer() {
 
     const isTabletOrMobile = useContext(isTabletOrMobileContext)
     const { theme } = useContext(ThemeContext)
-    const [isMenuVisible, setIsMenuVisible] = useState(true)
+    const [ menuAnimationType, setMenuAnimationType ] = useState('none')
     const [menuType, setMenuType] = useState(null)
-    const [animationType, setAnimationType] = useState('enter')
-
-    useEffect(() => {
-        return isTabletOrMobile
-        ? setIsMenuVisible(!isTabletOrMobile)
-        : null
-    }, [isTabletOrMobile])
 
     useEffect(() => {
         return isTabletOrMobile
@@ -26,16 +19,12 @@ function Footer() {
         : setMenuType('desktop-menu')
     }, [isTabletOrMobile])
 
-    useEffect(() => {
-        setAnimationType(() => {
-            return isMenuVisible
-            ? 'enter'
-            : 'exit'
-        })
-    }, [isMenuVisible])
-
     const toggleMenu = () => {
-        setIsMenuVisible(!isMenuVisible)
+        setMenuAnimationType(() => {
+            return menuAnimationType === 'enter'
+            ? 'exit'
+            : 'enter'
+        })
     }
 
     return(
@@ -45,7 +34,7 @@ function Footer() {
             :  <MenuButton toggleMenu={toggleMenu} /> }
                 <FooterMenu 
                 menuType={menuType} 
-                animationType={animationType}
+                animationType={menuAnimationType}
                 theme={theme} />
             <ProfilePhoto />
         </div>

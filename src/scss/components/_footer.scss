@@ -84,6 +84,7 @@
     }
   }
   position: absolute;
+  transform: translateY(100%);
   display: grid;
   grid-auto-flow: row;
   row-gap: 2px;
@@ -112,12 +113,6 @@
 }
 
 .desktop-menu {
-  &.enter {
-    animation: slide-in-bottom 0.5s both;
-  }
-  &.exit {
-    animation: slide-out-bottom 2s both;
-  }
   position: absolute;
   display: grid;
   height: 76px;
