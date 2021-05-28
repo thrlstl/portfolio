@@ -15,7 +15,14 @@ function Footer() {
     const [ isScrollingOrClicked, setIsScrollingOrClicked ] = useState(false)
     const [menuType, setMenuType] = useState(null)
     const location = useLocation()
-
+    const currentRoute = location.pathname
+    
+    useEffect(() => {
+        return isTabletOrMobile
+        ? setMenuType('mobile-menu')
+        : setMenuType('desktop-menu')
+    }, [isTabletOrMobile])
+    
     useEffect(() => {
         const pageContainer = document.querySelector('.page-container')
         pageContainer.addEventListener('scroll', () => setIsScrollingOrClicked(true), setTimeout(() => setIsScrollingOrClicked(false), 1000))
@@ -26,19 +33,18 @@ function Footer() {
         return isScrollingOrClicked && menuAnimationType === 'entering'
         ? toggleMenu()
         : null
-    }, [isScrollingOrClicked])
+    })
+
 
     useEffect(() => {
-        return isTabletOrMobile
-        ? setMenuType('mobile-menu')
-        : setMenuType('desktop-menu')
-    }, [isTabletOrMobile])
-
-    useEffect(() => {
-        return location.pathname !== '/'
-        ? toggleMenu()
+        return currentRoute !== '/'
+        ? setMenuAnimationType(menuAnimationType => {
+            return menuAnimationType === 'entering' 
+            ? 'exiting'
+            : 'entering' 
+        })
         : null
-    }, [location])
+    }, [currentRoute])
 
     const toggleMenu = () => {
         setMenuAnimationType(() => {

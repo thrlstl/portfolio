@@ -62,11 +62,11 @@ function QuickFacts() {
         'reading' ]
 
     const renderFavorites = () => {
-        return favorites.map(favorite => <p>{favorite}</p>)
+        return favorites.map((favorite, index) => <p key={index}>{favorite}</p>)
     }
 
     const renderHobbies = () => {
-        return hobbies.map(hobby => <p>{hobby}</p>)
+        return hobbies.map((hobby, index) => <p key={index}>{hobby}</p>)
     }
 
     return(
