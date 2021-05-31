@@ -2,10 +2,10 @@ import React, { useContext, useState, useEffect } from 'react'
 import ThemeContext from '../../contexts/ThemeContext'
 import SignatureBlack from '../../assets/images/about/signature-black.png'
 import SignatureWhite from '../../assets/images/about/signature-white.png'
-import BackgroundImageDark from '../../assets/images/about/background-image-dark.png'
-import BackgroundImageLight from '../../assets/images/about/background-image-light.png'
-import BackgroundShadowBlue from '../../assets/images/about/background-shadow-blue.png'
-import BackgroundShadowRed from '../../assets/images/about/background-shadow-red.png'
+import BackgroundImageDark from '../../assets/images/about/bg-image-dark.svg'
+import BackgroundImageLight from '../../assets/images/about/bg-image-light.svg'
+import BackgroundShadowBlue from '../../assets/images/about/bg-shadow-blue.svg'
+import BackgroundShadowRed from '../../assets/images/about/bg-shadow-red.svg'
 
 function Signature(props) {
     return(
