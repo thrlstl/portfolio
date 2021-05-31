@@ -109,4 +109,7 @@ $card-width-mobile: 80vw;
     font-size: 15px;
     padding: $card-alignment-mobile calc(#{$card-alignment-mobile * 2});
   }
+  &:hover {
+    transform: scale(1.03);
+  }
 }

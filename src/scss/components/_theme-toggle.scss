@@ -12,6 +12,7 @@
   &[theme="dark"] {
     opacity: 0.5;
     background: $toggle-gradient;
+    border: solid 2px $dark-gray;
     &:hover {
       opacity: 0.2;
     }
@@ -29,7 +30,7 @@
   }
   &[type="mobile"] {
     margin-left: 0;
-    margin-right: 2vw;
+    margin-right: 3vw;
   }
 }
 
