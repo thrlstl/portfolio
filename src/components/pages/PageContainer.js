@@ -9,7 +9,9 @@ function PageContainer(props) {
     const pageContainer = document.querySelector('.page-container')
 
     useEffect(() => {
-        pageContainer.scrollTo(0, 0)
+        return pageContainer
+        ? pageContainer.scrollTo(0, 0)
+        : null
     }, [location])
 
     const currentPage = () => {
