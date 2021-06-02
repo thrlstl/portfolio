@@ -149,21 +149,27 @@
     height: 76px;
     width: min-content;
   }
-  @media (max-width: 768px) {
-    &.selected {
-      transition: background-color 0.2s ease-in-out;
-      animation: mobile-menu-item-selected 0.2s ease-in-out both;
-      &.selected[theme="light"] {
-        transition: background-color 0.2s ease-in-out;
-        animation: mobile-menu-item-selected-light 0.2s ease-in-out both;
-      }
-    }
-  }
   &[theme="light"] {
     background-color: white;
     & .menu-item-name {
       color: black;
     }
+  }
+  @media (max-width: 768px) {
+    &:active {
+      background-color: $opaque-light-gray;
+      &:active[theme="light"] {
+        background-color: $opaque-white;
+      }
+    }
+    // &.selected {
+    //   transition: background-color 0.2s ease-in-out;
+    //   animation: mobile-menu-item-selected 0.2s ease-in-out both;
+    //   &.selected[theme="light"] {
+    //     transition: background-color 0.2s ease-in-out;
+    //     animation: mobile-menu-item-selected-light 0.2s ease-in-out both;
+    //   }
+    // }
   }
 }
 
