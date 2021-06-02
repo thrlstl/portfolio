@@ -68,7 +68,6 @@ $card-width-mobile: 80vw;
   }
   @media (hover: hover) {
     &:hover {
-      cursor: pointer;
       .project-name {
         font-size: 2.1vw;
         border-bottom: 2px solid $pastel-blue;
@@ -136,6 +135,9 @@ $card-width-mobile: 80vw;
     left: $card-alignment-mobile;
     bottom: $card-alignment-mobile;
     max-height: none;
+  }
+  @media (hover: hover) {
+    cursor: pointer;
   }
 }
 
