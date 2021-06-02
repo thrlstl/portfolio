@@ -6,6 +6,16 @@ import ProjectsPage from './projects-page/ProjectsPage'
 import ResumePage from './ResumePage'
 
 function CurrentPage() {
+
+    // const { pathname } = useLocation()
+    // console.log(pathname)
+
+    // useEffect(() => {
+    //     console.log(pathname)
+    //     const scroll = window.scrollX
+    //     console.log(scroll)
+    // }, [pathname])
+
     return(
         <Switch>
             <Route exact path='/' component={AboutPage}/>

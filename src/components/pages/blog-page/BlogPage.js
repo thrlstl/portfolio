@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import blogsData from './BlogData'
 import ThemeContext from '../../../contexts/ThemeContext'
 
@@ -70,6 +70,10 @@ function BlogPage() {
     const renderBlogs = () => {
         return blogsData.map(blog => <BlogCard key={blog.title} {...blog} />)
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     return(
         <BlogFeed>

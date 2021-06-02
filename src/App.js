@@ -13,19 +13,10 @@ import isTabletOrMobileContext from './contexts/isTabletOrMobileContext'
 
 function App() {
 
-  // const [toggle] = useState(true)
   const [theme, setTheme] = useState('dark')
-  const value = { theme, setTheme }
+  const themeValue = { theme, setTheme }
   const [splashScreenVisible, setSplashScreenVisible] = useState(true)
   const isTabletOrMobile = useMediaQuery({ query: '(max-width: 768px)' })
-
-  // useEffect(() => {
-  //   setTheme(() => {
-  //     return toggle
-  //       ? 'dark'
-  //       : 'light'
-  //   })
-  // }, [toggle])
 
   useEffect(() => {
     setTimeout(() => {
@@ -47,7 +38,7 @@ function App() {
   }
 
   return (
-    <ThemeContext.Provider value={value}>
+    <ThemeContext.Provider value={themeValue}>
       <isTabletOrMobileContext.Provider value={isTabletOrMobile}>
           <div className="App" theme={theme}>
             { splashScreenVisible

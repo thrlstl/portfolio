@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useLocation } from 'react-router-dom'
 
 function PageContainer(props) {
@@ -6,6 +6,11 @@ function PageContainer(props) {
     const location = useLocation()
     const currentRoute = location.pathname.split('/')[1]
     const homePage = 'about'
+    const pageContainer = document.querySelector('.page-container')
+
+    useEffect(() => {
+        pageContainer.scrollTo(0, 0)
+    }, [location])
 
     const currentPage = () => {
         return currentRoute === ''

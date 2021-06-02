@@ -93,6 +93,10 @@ function AboutPage() {
         backgroundShadow: null,
     })
 
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    //   }, [])
+
     useEffect(() => {
         setImages(() => {
             return theme === 'light'
