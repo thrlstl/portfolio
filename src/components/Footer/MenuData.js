@@ -1,11 +1,11 @@
 const MenuData = [
     {
-        name: 'Projects',
-        route: '/projects'
-    },
-    {
         name: 'About',
         route: '/about'
+    },
+    {
+        name: 'Projects',
+        route: '/projects'
     },
     {
         name: 'Resume',

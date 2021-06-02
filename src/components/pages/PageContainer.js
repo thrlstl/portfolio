@@ -3,9 +3,9 @@ import { useLocation } from 'react-router-dom'
 
 function PageContainer(props) {
 
-    const location = useLocation()
-    const currentRoute = location.pathname.split('/')[1]
-    const homePage = 'about'
+    const { location, pathname } = useLocation()
+    const currentRoute = pathname.split('/')[1]
+    // const homePage = 'about'
     const pageContainer = document.querySelector('.page-container')
 
     useEffect(() => {
@@ -14,14 +14,14 @@ function PageContainer(props) {
         : null
     }, [location, pageContainer])
 
-    const currentPage = () => {
-        return currentRoute === ''
-        ? homePage
-        : currentRoute
-    }
+    // const currentPage = () => {
+    //     return currentRoute === ''
+    //     ? homePage
+    //     : currentRoute
+    // }
 
     return(
-        <div className={`${currentPage()} page-container`}>
+        <div className={`${currentRoute} page-container`}>
             {props.children}
         </div>
     )
