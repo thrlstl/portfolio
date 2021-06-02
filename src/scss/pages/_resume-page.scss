@@ -4,10 +4,17 @@
 }
 
 .resume-download-link {
-  margin-top: 10vw;
+  margin-top: 25%;
   text-decoration: none;
   color: $opaque-white;
-  border-bottom: solid 2px $pastel-blue;
-  font-weight: 500;
+  padding: 3vw;
+  border: solid 2px $opaque-white;
+  font-weight: 600;
   font-size: 6vw;
+  &[theme="light"] {
+    color: $dark-gray;
+  }
+  &:active {
+    border-color: $pastel-blue;
+  }
 }

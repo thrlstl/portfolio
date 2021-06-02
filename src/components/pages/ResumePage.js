@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import Resume from '../../assets/resume.pdf'
 import isTabletOrMobileContext from '../../contexts/isTabletOrMobileContext'
+import ThemeContext from '../../contexts/ThemeContext'
 
 function ResumePDF() {
     return(
@@ -13,10 +14,16 @@ function ResumePDF() {
 }
 
 function ResumeDownloadLink() {
+
+    const { theme } = useContext(ThemeContext)
+
     return(
         <a
         className='resume-download-link' 
-        href={Resume} download='Matthew-Steele-Resume'>Download Resume</a>
+        theme={theme}
+        href={Resume} 
+        download='Matthew-Steele-Resume'
+        target='_blank'>Download Resume</a>
     )
 }
 
