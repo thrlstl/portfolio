@@ -41,7 +41,7 @@ $card-width-mobile: 80vw;
       padding-left: 0px;
     }
     &:last-child {
-      padding-bottom: $feed-spacing-mobile;
+      padding-bottom: $feed-spacing-mobile * 6;
     }
   }
 }
