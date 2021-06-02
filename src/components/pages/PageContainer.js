@@ -12,7 +12,7 @@ function PageContainer(props) {
         return pageContainer
         ? pageContainer.scrollTo(0, 0)
         : null
-    }, [location])
+    }, [location, pageContainer])
 
     const currentPage = () => {
         return currentRoute === ''
