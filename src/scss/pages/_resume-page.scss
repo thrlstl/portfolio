@@ -1,4 +1,13 @@
 .resume-document {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
+}
+
+.resume-download-link {
+  margin-top: 10vw;
+  text-decoration: none;
+  color: $opaque-white;
+  border-bottom: solid 2px $pastel-blue;
+  font-weight: 500;
+  font-size: 6vw;
 }

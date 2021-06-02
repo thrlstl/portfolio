@@ -1,14 +1,33 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Resume from '../../assets/resume.pdf'
+import isTabletOrMobileContext from '../../contexts/isTabletOrMobileContext'
 
-function ResumePage() {
-    return (
+function ResumePDF() {
+    return(
         <object
         className='resume-document' 
         data={Resume}
         type='application/pdf'>
         </object>
-        // <embed className='resume-document' src={Resume} type="application/pdf" />
+    )
+}
+
+function ResumeDownloadLink() {
+    return(
+        <a
+        className='resume-download-link' 
+        href={Resume} download='Matthew-Steele-Resume'>Download Resume</a>
+    )
+}
+
+function ResumePage() {
+
+    const isTabletOrMobile = useContext(isTabletOrMobileContext)
+
+    return (
+        isTabletOrMobile
+        ? <ResumeDownloadLink />
+        : <ResumePDF />
     )
 }
 

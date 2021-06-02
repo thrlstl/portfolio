@@ -48,4 +48,9 @@
       justify-content: center;
     }
   }
+  &.resume {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
 }
