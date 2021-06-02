@@ -23,7 +23,8 @@ function ResumeDownloadLink() {
         theme={theme}
         href={Resume} 
         download='Matthew-Steele-Resume'
-        target='_blank'>Download Resume</a>
+        target='_blank'
+        rel="noreferrer">Download Resume</a>
     )
 }
 
