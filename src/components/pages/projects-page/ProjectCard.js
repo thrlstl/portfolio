@@ -164,8 +164,9 @@ function TagItem(props) {
         className='tag-item'
         type='title'
         theme={theme}>tags</p>
-        {tags.map(item => 
+        {tags.map((item, index) => 
         <p 
+        key={index}
         className='tag-item'
         type={item.type}
         theme={theme}>
