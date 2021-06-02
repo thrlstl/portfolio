@@ -58,8 +58,8 @@ $card-width-mobile: 80vw;
     }
     &:active {
       .project-name {
-        font-size: 8.1vw;
-        text-decoration: 2px underline $pastel-blue;
+        font-size: 8.2vw;
+        text-decoration: underline solid $pastel-blue;
       }
       .more-info-button {
         font-size: 2.7vw;
