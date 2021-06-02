@@ -68,6 +68,7 @@ $card-width-mobile: 80vw;
   }
   @media (hover: hover) {
     &:hover {
+      cursor: pointer;
       .project-name {
         font-size: 2.1vw;
         border-bottom: 2px solid $pastel-blue;
