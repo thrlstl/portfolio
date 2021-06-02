@@ -26,7 +26,7 @@ function CardShadow() {
 
 function ContentContainer(props) {
     return(
-        <div className='card-contents-container'>
+        <div className='card-contents-container' onClick={props.setIsModalVisible}>
             {props.children}
         </div>
     )
@@ -187,7 +187,7 @@ function Content(props) {
     const [isModalVisible, setIsModalVisible] = useState(false)
 
     return(
-        <ContentContainer>
+        <ContentContainer setIsModalVisible={() => setIsModalVisible(!isModalVisible)}>
             <RightInfoContainer>
                 <ProjectType type={props.type} />
                 <MoreInfoButton setIsModalVisible={() => setIsModalVisible(!isModalVisible)} />
