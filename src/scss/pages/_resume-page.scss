@@ -4,7 +4,9 @@
 }
 
 .resume-download-link {
-  margin-top: 25%;
+  background-color: $light-gray;
+  border-radius: 4px;
+  margin-top: 50%;
   text-decoration: none;
   color: $opaque-white;
   padding: 3vw;
@@ -12,7 +14,9 @@
   font-weight: 600;
   font-size: 6vw;
   &[theme="light"] {
-    color: $dark-gray;
+    color: white;
+    border-color: white;
+    background-color: $light-gray;
   }
   &:active {
     border-color: $pastel-blue;
