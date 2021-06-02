@@ -43,13 +43,10 @@ function BlogDescription(props) {
     )
 }
 
-function ReadMoreLink(props) {
+function ReadMoreIcon() {
     return(
-        <a 
-        className='read-more-link'
-        href={props.link}
-        target="_blank"
-        rel="noreferrer">Read More</a>
+        <p 
+        className='read-more-link'>Read More</p>
     )
 }
 
@@ -64,7 +61,7 @@ function BlogCard(props) {
             <BlogThumbnail thumbnail={props.thumbnail} alt={props.title}/>
             <BlogTitle title={props.title} />
             <BlogDescription description={props.description}/>
-            <ReadMoreLink link={props.link} />
+            <ReadMoreIcon />
         </BlogCardContents>
     )
 }

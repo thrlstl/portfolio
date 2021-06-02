@@ -127,13 +127,5 @@ $card-width-mobile: 80vw;
   @media (max-width: 768px) {
     font-size: 15px;
     padding: $card-alignment-mobile calc(#{$card-alignment-mobile * 2});
-    // &:active {
-    //   transform: scale(1.03);
-    // }
   }
-  // @media (hover: hover) {
-  //   &:hover {
-  //     transform: scale(1.03);
-  //   }
-  // }
 }
