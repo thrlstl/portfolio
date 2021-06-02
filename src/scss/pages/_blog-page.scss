@@ -31,6 +31,17 @@ $card-width-mobile: 80vw;
   &:nth-last-child(-n + 1) {
     padding-bottom: $feed-spacing;
   }
+  @media (hover: hover) {
+    &:hover {
+      cursor: pointer;
+      .thumbnail-image {
+        opacity: 0.9;
+      }
+      .read-more-link {
+        transform: scale(1.03);
+      }
+    }
+  }
   @media (max-width: 768px) {
     width: $card-width-mobile;
     padding-top: $feed-spacing-mobile;
@@ -42,6 +53,14 @@ $card-width-mobile: 80vw;
     }
     &:last-child {
       padding-bottom: $feed-spacing-mobile * 6;
+    }
+    &:active {
+      .thumbnail-image {
+        opacity: 0.9;
+      }
+      .read-more-link {
+        transform: scale(1.03);
+      }
     }
   }
 }
@@ -108,8 +127,13 @@ $card-width-mobile: 80vw;
   @media (max-width: 768px) {
     font-size: 15px;
     padding: $card-alignment-mobile calc(#{$card-alignment-mobile * 2});
+    // &:active {
+    //   transform: scale(1.03);
+    // }
   }
-  &:hover {
-    transform: scale(1.03);
-  }
+  // @media (hover: hover) {
+  //   &:hover {
+  //     transform: scale(1.03);
+  //   }
+  // }
 }

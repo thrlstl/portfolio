@@ -12,7 +12,7 @@ function BlogFeed(props) {
 
 function BlogCardContents(props) {
     return(
-        <div className='blog-card-contents-container'>
+        <div className='blog-card-contents-container' onClick={props.handleClick}>
             {props.children}
         </div>
     )
@@ -55,8 +55,12 @@ function ReadMoreLink(props) {
 
 function BlogCard(props) {
 
+    const handleClick = () => {
+        window.open(`${props.link}`, "_blank")
+    }
+
     return(
-        <BlogCardContents>
+        <BlogCardContents handleClick={() => handleClick()}>
             <BlogThumbnail thumbnail={props.thumbnail} alt={props.title}/>
             <BlogTitle title={props.title} />
             <BlogDescription description={props.description}/>
