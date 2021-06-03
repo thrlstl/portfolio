@@ -48,12 +48,54 @@ const projectsData = [
         ]
     },
     {
+        name: 'Code For Chicago',
+        type: 'Front-End Developer — Volunteer',
+        logo: '',
+        description: 'Civic tech bridges the gap between the civic space and technology. It’s utilizing technology practices like design, engineering, data science, etc. to optimize the processes for civic organizations.',
+        stack: [{type: 'Jekyll'}],
+        tags: [
+            {type: 'HTML5'},
+            {type: 'Responsive Web Design'},
+            {type: 'SCSS'},
+            {type: 'CSS3'},
+            {type: 'Jekyll'},
+        ],
+        links: [
+            {
+                type: 'CodeForChicago.org',
+                URL: 'https://codeforchicago.org/',
+            }
+        ]
+    },
+    // {
+    //     name: 'OUT In Tech — Digital Corps',
+    //     type: 'Front-End Developer — Volunteer',
+    //     logo: '',
+    //     description: 'Civic tech bridges the gap between the civic space and technology. It’s utilizing technology practices like design, engineering, data science, etc. to optimize the processes for civic organizations.',
+    //     stack: [{type: 'Jekyll'}],
+    //     tags: [
+    //         {type: 'HTML5'},
+    //         {type: 'SCSS'},
+    //         {type: 'CSS3'},
+    //         {type: 'Jekyll'},
+    //     ],
+    //     links: [
+    //         {
+    //             type: 'CodeForChicago.org',
+    //             URL: 'https://codeforchicago.org/',
+    //         }
+    //     ]
+    // },
+    {
         name: 'Portfolio',
         type: 'Responsive Web App',
         logo: '',
         description: 'Personal portfolio designed and built from scratch.',
         stack: [{type: 'React'}],
-        tags: [{type: 'React'}],
+        tags: [
+            {type: 'React'},
+            {type: 'Responsive Web Design'},
+        ],
         links: [
             {
                 type: 'Github',
@@ -125,20 +167,6 @@ const projectsData = [
             }
         ]
     },
-    // {
-    //     name: 'Code For America — Chicago',
-    //     type: 'Web App',
-    //     logo: '',
-    //     description: 'https://codeforchicago.org/',
-    //     stack: ['Jykyll'],
-    //     tags: '',
-    //     links: [
-    //         {
-    //             type: 'Live Site',
-    //             URL: 'https://codeforchicago.org/',
-    //         }
-    //     ]
-    // },
     {
         name: 'Flatnote',
         type: 'Full-Stack Web App',

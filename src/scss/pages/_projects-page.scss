@@ -23,7 +23,7 @@ $card-width-mobile: 80vw;
 .project-card-container {
   display: flex;
   padding-top: calc(#{$feed-spacing} + #{$card-alignment});
-  &:nth-last-child(-n + 2) {
+  &:last-child {
     padding-bottom: $feed-spacing;
   }
   &:nth-child(even) {
@@ -56,27 +56,27 @@ $card-width-mobile: 80vw;
     &:last-child {
       padding-bottom: $feed-spacing-mobile * 6;
     }
-    &:active {
-      .project-name {
-        font-size: 8.2vw;
-        text-decoration: underline solid $pastel-blue;
-      }
-      .more-info-button {
-        font-size: 2.7vw;
-      }
-    }
+    // &:active {
+    //   .project-name {
+    //     font-size: 8.2vw;
+    //     text-decoration: underline solid $pastel-blue;
+    //   }
+    //   .more-info-button {
+    //     font-size: 2.7vw;
+    //   }
+    // }
   }
-  @media (hover: hover) {
-    &:hover {
-      .project-name {
-        font-size: 2.1vw;
-        border-bottom: 2px solid $pastel-blue;
-      }
-      .more-info-button {
-        font-size: 14px;
-      }
-    }
-  }
+  // @media (hover: hover) {
+  //   &:hover {
+  //     .project-name {
+  //       font-size: 2.1vw;
+  //       border-bottom: 2px solid $pastel-blue;
+  //     }
+  //     .more-info-button {
+  //       font-size: 14px;
+  //     }
+  //   }
+  // }
 }
 
 .card-header {
@@ -135,10 +135,39 @@ $card-width-mobile: 80vw;
     left: $card-alignment-mobile;
     bottom: $card-alignment-mobile;
     max-height: none;
+    &:active {
+      .project-name {
+        font-size: 8.2vw;
+        text-decoration: underline solid $pastel-blue;
+      }
+      .more-info-button {
+        font-size: 2.7vw;
+      }
+    }
   }
   @media (hover: hover) {
     cursor: pointer;
+    &:hover {
+      .project-name {
+        font-size: 2.1vw;
+        border-bottom: 2px solid $pastel-blue;
+      }
+      .more-info-button {
+        font-size: 14px;
+      }
+    }
   }
+  // @media (hover: hover) {
+  //   &:hover {
+  //     .project-name {
+  //       font-size: 2.1vw;
+  //       border-bottom: 2px solid $pastel-blue;
+  //     }
+  //     .more-info-button {
+  //       font-size: 14px;
+  //     }
+  //   }
+  // }
 }
 
 .project-name {
@@ -232,7 +261,8 @@ $card-width-mobile: 80vw;
   &[type="React"] {
     background-color: $pastel-blue;
   }
-  &[type="Ruby on Rails"] {
+  &[type="Ruby on Rails"],
+  &[type="Jekyll"] {
     background-color: $pastel-red;
   }
   &[type="Javascript"] {
