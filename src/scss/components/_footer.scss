@@ -125,14 +125,8 @@
   width: 100%;
   height: min-content;
   bottom: 0;
-  box-shadow: $dark-mode-shadow;
-  -webkit-box-shadow: $dark-mode-shadow;
-  -moz-box-shadow: $dark-mode-shadow;
   &.desktop-menu[theme="light"] {
     background-color: white;
-    box-shadow: $light-mode-shadow;
-    -webkit-box-shadow: $light-mode-shadow;
-    -moz-box-shadow: $light-mode-shadow;
   }
 }
 
@@ -144,7 +138,6 @@
   justify-content: center;
   height: 15vw;
   width: 100vw;
-  // transition: background-color 0.2s ease-in-out;
   @media (min-width: 768px) {
     height: 76px;
     width: min-content;
