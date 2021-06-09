@@ -90,7 +90,7 @@
     position: relative;
     margin-left: auto;
     margin-right: auto;
-    height: min-content;
+    // height: min-content;
   }
   &[theme="light"] {
     color: black;
@@ -111,6 +111,8 @@
 .quick-facts-content {
   margin-top: 5vw;
   & p {
+    width: max-content;
+    height: max-content;
     animation: $fade-in;
     -webkit-animation: $fade-in;
     font-size: 20px;
@@ -160,3 +162,11 @@
     margin-bottom: 60vw;
   }
 }
+
+// .quick-fact-item {
+//   @media (hover: hover) {
+//     &:hover {
+//       color: aquamarine;
+//     }
+//   }
+// }

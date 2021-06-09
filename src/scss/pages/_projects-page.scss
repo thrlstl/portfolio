@@ -56,27 +56,7 @@ $card-width-mobile: 80vw;
     &:last-child {
       padding-bottom: $feed-spacing-mobile * 6;
     }
-    // &:active {
-    //   .project-name {
-    //     font-size: 8.2vw;
-    //     text-decoration: underline solid $pastel-blue;
-    //   }
-    //   .more-info-button {
-    //     font-size: 2.7vw;
-    //   }
-    // }
   }
-  // @media (hover: hover) {
-  //   &:hover {
-  //     .project-name {
-  //       font-size: 2.1vw;
-  //       border-bottom: 2px solid $pastel-blue;
-  //     }
-  //     .more-info-button {
-  //       font-size: 14px;
-  //     }
-  //   }
-  // }
 }
 
 .card-header {
@@ -157,17 +137,6 @@ $card-width-mobile: 80vw;
       }
     }
   }
-  // @media (hover: hover) {
-  //   &:hover {
-  //     .project-name {
-  //       font-size: 2.1vw;
-  //       border-bottom: 2px solid $pastel-blue;
-  //     }
-  //     .more-info-button {
-  //       font-size: 14px;
-  //     }
-  //   }
-  // }
 }
 
 .project-name {
@@ -268,6 +237,9 @@ $card-width-mobile: 80vw;
   &[type="Javascript"] {
     color: $opaque-light-gray;
     background-color: #f0db4f;
+  }
+  &[type='WordPress'] {
+    background-color: #316192;
   }
 }
 
@@ -429,7 +401,8 @@ $card-width-mobile: 80vw;
   }
   &[type="PostgreSQL"],
   &[type="BuilderX"],
-  &[type="Adobe Photoshop (Wireframes)"] {
+  &[type="Adobe Photoshop (Wireframes)"],
+  &[type='WordPress'] {
     background-color: #316192;
   }
   &[type="SCSS"] {

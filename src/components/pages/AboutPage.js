@@ -46,12 +46,13 @@ function QuickFacts() {
     const { theme } = useContext(ThemeContext)
 
     const favorites = [
-        'favorites', 
-        'iced americano', 
-        'mariah carey', 
-        'blue', 
-        'sichuan', 
-        'photoshop' ]
+        {content: 'favorites'},
+        {content: 'iced americano'},
+        {content: 'mariah carey'},
+        {content: 'blue'},
+        {content: 'sichuan'},
+        {content: 'photoshop'}
+    ]
 
     const hobbies = [
         'hobbies', 
@@ -62,7 +63,7 @@ function QuickFacts() {
         'reading' ]
 
     const renderFavorites = () => {
-        return favorites.map((favorite, index) => <p key={index}>{favorite}</p>)
+        return favorites.map((favorite, index) => <p className='quick-fact-item' key={index}>{favorite.content}</p>)
     }
 
     const renderHobbies = () => {
